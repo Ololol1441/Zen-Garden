@@ -1,32 +1,39 @@
+```html
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Zen Garden • V5.6</title>
+<title>Zen Garden • V5.5</title>
+
 <style>
 *{box-sizing:border-box}
+
 html,body{
   margin:0;
   min-height:100%;
   font-family:Georgia,"Times New Roman",serif;
 }
+
 body{
   background:#24352b;
   color:#f4e5c7;
   overflow-x:hidden;
   transition:background .8s;
 }
+
 button{
   font:inherit;
   cursor:pointer;
   border:0;
 }
+
 .hidden{display:none!important}
 
 /* =========================================================
-TOPPMENY
+   TOPPMENY
 ========================================================= */
+
 .topbar{
   height:94px;
   background:linear-gradient(180deg,#69482f,#563a27);
@@ -40,6 +47,7 @@ TOPPMENY
   z-index:1000;
   box-shadow:0 5px 25px #0007;
 }
+
 .brand{
   display:flex;
   align-items:center;
@@ -47,26 +55,31 @@ TOPPMENY
   flex:1;
   min-width:250px;
 }
+
 .logo{
   font-size:49px;
   filter:drop-shadow(0 3px 3px #0008);
 }
+
 .brand h1{
   margin:0;
   font-size:32px;
   line-height:1;
 }
+
 .brand small{
   display:block;
   margin-top:5px;
   color:#d8c6a8;
   font-size:16px;
 }
+
 .top-stats{
   display:flex;
   gap:10px;
   align-items:center;
 }
+
 .stat{
   background:#20251fdd;
   border:1px solid #765738;
@@ -81,6 +94,7 @@ TOPPMENY
   font-weight:bold;
   white-space:nowrap;
 }
+
 .hamburger{
   width:67px;
   height:67px;
@@ -93,6 +107,7 @@ TOPPMENY
   align-items:center;
   gap:7px;
 }
+
 .hamburger span{
   width:33px;
   height:4px;
@@ -101,8 +116,9 @@ TOPPMENY
 }
 
 /* =========================================================
-SIDE / PAGE
+   SIDE / PAGE
 ========================================================= */
+
 .page{
   width:calc(100% - 84px);
   margin:26px auto 70px;
@@ -110,14 +126,16 @@ SIDE / PAGE
 }
 
 /* =========================================================
-INFORMASJONSKORT
+   INFORMASJONSKORT
 ========================================================= */
+
 .info-grid{
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
   gap:20px;
   margin-bottom:20px;
 }
+
 .info-card{
   min-height:168px;
   background:linear-gradient(145deg,#213228,#192a21);
@@ -129,29 +147,35 @@ INFORMASJONSKORT
     0 8px 22px #0003;
   overflow:hidden;
 }
+
 .info-title{
   font-size:26px;
   font-weight:bold;
   margin-bottom:13px;
 }
+
 .weather-main{
   display:flex;
   align-items:center;
   gap:18px;
   font-size:45px;
 }
+
 .weather-name{
   font-size:42px;
 }
+
 .info-sub{
   text-align:center;
   margin-top:8px;
   color:#d8c6a8;
 }
+
 .boss-name{
   font-size:25px;
   margin:7px 0 11px;
 }
+
 .boss-bar{
   height:19px;
   border-radius:15px;
@@ -159,23 +183,27 @@ INFORMASJONSKORT
   overflow:hidden;
   border:1px solid #8b6545;
 }
+
 .boss-fill{
   height:100%;
   background:linear-gradient(90deg,#ff4747,#ffb63d);
   transition:.25s;
 }
+
 .boss-meta{
   text-align:center;
   margin-top:8px;
 }
+
 .event-main{
   font-size:24px;
   line-height:1.35;
 }
 
 /* =========================================================
-HAGE
+   HAGE
 ========================================================= */
+
 .garden-shell{
   border:4px solid #825d3e;
   border-radius:40px;
@@ -195,6 +223,7 @@ HAGE
   position:relative;
   min-height:650px;
 }
+
 .garden-inner{
   padding:33px 40px 40px;
   border-radius:30px;
@@ -208,18 +237,20 @@ HAGE
     );
   border:1px solid #566747;
   min-height:570px;
-  position:relative;
 }
+
 .garden-layout{
   display:grid;
   grid-template-columns:minmax(0,1fr) 235px;
   gap:20px;
 }
+
 .plots{
   display:grid;
   grid-template-columns:repeat(5,minmax(130px,1fr));
   gap:25px;
 }
+
 .plot{
   min-height:218px;
   border-radius:29px;
@@ -232,6 +263,7 @@ HAGE
   padding:14px;
   transition:.18s;
 }
+
 .plot.unlocked{
   background:
     radial-gradient(circle at 50% 20%,#8a5938,#57351f 70%);
@@ -240,14 +272,11 @@ HAGE
     inset 0 0 30px #2d170d,
     0 5px 12px #0005;
 }
-.plot.unlocked.ready-glow{
-  box-shadow:
-    0 0 18px #ffd84e66,
-    inset 0 0 30px #2d170d;
-}
+
 .plot.unlocked:hover{
   transform:translateY(-3px);
 }
+
 .plot.locked{
   background:
     linear-gradient(#5a482cdd,#4a3a27dd),
@@ -262,32 +291,39 @@ HAGE
   color:#d5c7a9;
   cursor:pointer;
 }
+
 .plot.locked:hover{
   transform:translateY(-4px);
   filter:brightness(1.15);
 }
+
 .lock{
   font-size:46px;
   margin-bottom:3px;
 }
+
 .plot-name{
   font-size:24px;
   font-weight:bold;
 }
+
 .plot-price{
   margin-top:9px;
   font-size:16px;
   color:#e4ca7a;
 }
+
 .plant-icon{
   font-size:55px;
   line-height:1;
 }
+
 .plant-name{
   margin-top:9px;
   font-size:21px;
   font-weight:bold;
 }
+
 .progress{
   width:85%;
   height:10px;
@@ -296,30 +332,27 @@ HAGE
   overflow:hidden;
   margin-top:11px;
 }
+
 .progress-fill{
   height:100%;
   background:linear-gradient(90deg,#80c95c,#e6dc69);
 }
+
 .ready{
   color:#ffd84e;
   font-weight:bold;
   margin-top:7px;
 }
+
 .mutation{
   margin-top:5px;
   font-size:14px;
 }
-.mutation-glow{
-  animation:mutGlow 1.5s ease-in-out infinite;
-}
-@keyframes mutGlow{
-  0%,100%{text-shadow:0 0 0 #ffd6ff00;}
-  50%{text-shadow:0 0 8px #ffd6ff;}
-}
 
 /* =========================================================
-HØGRE MENY
+   HØYRE MENY
 ========================================================= */
+
 .side-menu{
   display:flex;
   flex-direction:column;
@@ -328,6 +361,7 @@ HØGRE MENY
   top:120px;
   align-self:start;
 }
+
 .side-btn{
   min-height:119px;
   padding:18px;
@@ -339,15 +373,18 @@ HØGRE MENY
   box-shadow:0 6px 15px #0004;
   transition:.18s;
 }
+
 .side-btn:hover{
   transform:translateX(-4px);
   background:linear-gradient(145deg,#426447,#344e3b);
 }
+
 .side-btn .big{
   display:block;
   font-size:28px;
   font-weight:bold;
 }
+
 .side-btn small{
   display:block;
   font-size:17px;
@@ -356,8 +393,9 @@ HØGRE MENY
 }
 
 /* =========================================================
-MODAL
+   MODAL
 ========================================================= */
+
 .modal{
   position:fixed;
   inset:2.5vh 2.5vw;
@@ -370,6 +408,7 @@ MODAL
   overflow:auto;
   padding:32px;
 }
+
 .modal-head{
   display:flex;
   justify-content:space-between;
@@ -379,10 +418,12 @@ MODAL
   padding-bottom:17px;
   margin-bottom:20px;
 }
+
 .modal-head h2{
   margin:0;
   font-size:32px;
 }
+
 .close{
   width:50px;
   height:50px;
@@ -391,6 +432,7 @@ MODAL
   color:#f7e9ca;
   font-size:28px;
 }
+
 .shop-grid,
 .pet-grid,
 .upgrade-grid,
@@ -399,6 +441,7 @@ MODAL
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:17px;
 }
+
 .card{
   background:#203329;
   border:1px solid #765a3e;
@@ -406,14 +449,17 @@ MODAL
   padding:18px;
   box-shadow:inset 0 0 25px #0003;
 }
+
 .card h3{
   margin:4px 0 8px;
   font-size:23px;
 }
+
 .card p{
   color:#d7c8aa;
   margin:7px 0;
 }
+
 .card button,
 .action{
   width:100%;
@@ -424,17 +470,21 @@ MODAL
   color:#fff4dc;
   font-weight:bold;
 }
+
 .card button:hover,
 .action:hover{
   filter:brightness(1.15);
 }
+
 .card button:disabled{
   opacity:.45;
   cursor:not-allowed;
 }
+
 .rarity{
   font-weight:bold;
 }
+
 .common{color:#b7b7b7}
 .uncommon{color:#49d66d}
 .rare{color:#4aa3ff}
@@ -442,13 +492,15 @@ MODAL
 .mythical{color:#ff4f5e}
 .exotic{color:#7ee8ff}
 .legendary{color:#ffd34d}
+
 .seed-icon{
   font-size:42px;
 }
 
 /* =========================================================
-SHOP PENGAR
+   SHOP PENGER
 ========================================================= */
+
 .shop-money{
   background:linear-gradient(145deg,#3b5238,#293d30);
   border:2px solid #947049;
@@ -460,13 +512,15 @@ SHOP PENGAR
   text-align:center;
   box-shadow:inset 0 0 20px #0003;
 }
+
 .shop-money span{
   color:#ffd66a;
 }
 
 /* =========================================================
-START
+   START
 ========================================================= */
+
 .home{
   min-height:100vh;
   display:flex;
@@ -476,6 +530,7 @@ START
   background:
     radial-gradient(circle at 50% 20%,#38533d,#18271f 70%);
 }
+
 .home-box{
   width:min(700px,100%);
   padding:45px;
@@ -485,17 +540,21 @@ START
   box-shadow:0 20px 70px #0009;
   text-align:center;
 }
+
 .home-logo{
   font-size:75px;
 }
+
 .home h1{
   font-size:48px;
   margin:8px 0;
 }
+
 .home p{
   color:#d9c9ab;
   font-size:19px;
 }
+
 .name-input{
   width:100%;
   padding:16px;
@@ -506,6 +565,7 @@ START
   font-size:20px;
   margin:14px 0;
 }
+
 .start-btn{
   width:100%;
   padding:16px;
@@ -515,12 +575,14 @@ START
   font-size:21px;
   font-weight:bold;
 }
+
 .home-buttons{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:12px;
   margin-top:15px;
 }
+
 .home-buttons button{
   padding:14px;
   border-radius:13px;
@@ -529,8 +591,9 @@ START
 }
 
 /* =========================================================
-TOAST
+   TOAST
 ========================================================= */
+
 #toast{
   position:fixed;
   left:50%;
@@ -548,196 +611,263 @@ TOAST
   max-width:90%;
   text-align:center;
 }
+
 #toast.show{
   transform:translateX(-50%) translateY(0);
 }
 
 /* =========================================================
-VÊR-LAG (INNE/OVER GARDEN)
+   VÆR
 ========================================================= */
+
 #weatherLayer{
-  position:absolute;
-  inset:0;
+  position:fixed;
+  inset:94px 0 0;
   z-index:40;
   pointer-events:none;
   overflow:hidden;
 }
 
-/* Regndråpar */
+/* REGN */
+
 .rain-drop{
   position:absolute;
+  top:-80px;
   width:2px;
-  height:40px;
+  height:42px;
   background:linear-gradient(transparent,#9bdcff);
-  opacity:.8;
-  animation:rainFall 1.2s linear infinite;
+  opacity:.75;
+  animation:rainFall linear forwards;
 }
+
 @keyframes rainFall{
-  from{transform:translateY(-60px) translateX(0);}
-  to{transform:translateY(260px) translateX(10px);}
+  to{
+    transform:translateY(110vh) translateX(-70px);
+  }
 }
 
-/* Storm-lyn (diskret) */
-.storm-flash{
+/* SNØ */
+
+.snow{
   position:absolute;
-  width:120px;
-  height:220px;
-  left:10%;
-  top:0;
-  background:radial-gradient(circle,#ffffff55,#ffffff00 70%);
-  opacity:0;
-  animation:stormFlash 4s infinite;
-}
-@keyframes stormFlash{
-  0%,80%,100%{opacity:0;}
-  82%,84%{opacity:.8;}
+  top:-30px;
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#eefaff;
+  opacity:.8;
+  animation:snowFall linear forwards;
 }
 
-/* Frost-krystallar */
-.frost-crystal{
-  position:absolute;
-  width:10px;
-  height:10px;
-  border-radius:2px;
-  background:#e0f7ff;
-  opacity:.7;
-  box-shadow:0 0 6px #e0f7ff;
-  animation:frostDrift 6s linear infinite;
-}
-@keyframes frostDrift{
-  from{transform:translateY(-20px);}
-  to{transform:translateY(260px);}
+@keyframes snowFall{
+  to{
+    transform:translateY(110vh) translateX(50px);
+  }
 }
 
-/* Fog */
-.fog-band{
+/* TÅKE */
+
+.fog{
   position:absolute;
-  width:80%;
-  height:120px;
-  left:10%;
-  bottom:10%;
+  width:60vw;
+  height:180px;
   border-radius:50%;
   background:#dce8df22;
   filter:blur(25px);
   animation:fogMove 18s linear infinite alternate;
 }
+
 @keyframes fogMove{
-  from{transform:translateX(-10%);}
-  to{transform:translateX(10%);}
+  from{transform:translateX(-20vw)}
+  to{transform:translateX(70vw)}
 }
 
-/* Regnboge */
-.rainbow-arc{
+/* LYN */
+
+.lightning{
   position:absolute;
-  width:80%;
-  height:260px;
-  left:10%;
-  top:5%;
-  border-radius:50%;
-  background:
-    conic-gradient(
-      from 180deg,
-      #ff0000,
-      #ff7f00,
-      #ffff00,
-      #00ff00,
-      #0000ff,
-      #4b0082,
-      #8f00ff,
-      #ff0000
-    );
-  filter:blur(4px) opacity(.75);
-  mask-image:radial-gradient(circle at 50% 0%,transparent 40%,black 70%);
-  animation:rainbowPulse 8s ease-in-out infinite;
+  inset:0;
+  background:#dff4ff33;
+  animation:flash 5s infinite;
 }
-@keyframes rainbowPulse{
-  0%,100%{opacity:.6;}
-  50%{opacity:.85;}
+
+@keyframes flash{
+  0%,91%,94%,100%{opacity:0}
+  92%,93%{opacity:1}
+}
+
+/* SOLPARTIKLER */
+
+.sun-particle{
+  position:absolute;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#ffe28a99;
+  animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+  50%{
+    transform:translateY(-30px);
+    opacity:.2;
+  }
 }
 
 /* =========================================================
-EVENT VISUAL (SAKURA UTAN TRE + MINI-EVENTS)
+   REGNBUE V5.5
+   Ca. 70 % gjennomsiktig = 30 % synlig farge
 ========================================================= */
-#eventVisual{
-  position:absolute;
+
+.rainbow-overlay{
+  position:fixed;
   inset:0;
+  z-index:35;
+  pointer-events:none;
+  opacity:.30;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,70,70,.95) 0%,
+      rgba(255,165,60,.90) 16%,
+      rgba(255,235,80,.90) 32%,
+      rgba(90,220,100,.90) 48%,
+      rgba(70,180,255,.90) 64%,
+      rgba(100,100,255,.90) 80%,
+      rgba(210,90,255,.90) 100%
+    );
+  mix-blend-mode:screen;
+}
+
+/* =========================================================
+   EVENT
+========================================================= */
+
+#eventVisual{
+  position:fixed;
+  inset:94px 0 0;
   z-index:38;
   pointer-events:none;
 }
 
-/* Sakura-petalar */
+/* SAKURA */
+
+.sakura-tree{
+  position:absolute;
+  right:6%;
+  bottom:4%;
+  width:300px;
+  height:380px;
+  animation:sakuraGrow 3s ease-out;
+}
+
+@keyframes sakuraGrow{
+  from{
+    transform:scale(.1);
+    transform-origin:bottom right;
+  }
+  to{
+    transform:scale(1);
+  }
+}
+
+.trunk{
+  position:absolute;
+  right:120px;
+  bottom:0;
+  width:35px;
+  height:260px;
+  background:linear-gradient(90deg,#3a2117,#71442b,#3a2117);
+  border-radius:30px;
+  transform:rotate(-5deg);
+}
+
+.branch{
+  position:absolute;
+  height:18px;
+  background:#563020;
+  border-radius:20px;
+  transform-origin:left;
+}
+
+.b1{
+  right:128px;
+  bottom:190px;
+  width:160px;
+  transform:rotate(-35deg);
+}
+
+.b2{
+  right:125px;
+  bottom:230px;
+  width:145px;
+  transform:rotate(35deg);
+}
+
+.b3{
+  right:140px;
+  bottom:145px;
+  width:130px;
+  transform:rotate(-65deg);
+}
+
+.blossom{
+  position:absolute;
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  background:#ff9dbb;
+  box-shadow:
+    13px 2px #ffb1c8,
+    -10px 6px #ff8faf,
+    3px -11px #ffb6cb,
+    15px -10px #ff9dbb;
+}
+
+.b01{right:260px;bottom:305px}
+.b02{right:175px;bottom:335px}
+.b03{right:100px;bottom:310px}
+.b04{right:235px;bottom:260px}
+.b05{right:145px;bottom:265px}
+.b06{right:75px;bottom:240px}
+.b07{right:255px;bottom:205px}
+.b08{right:180px;bottom:220px}
+.b09{right:105px;bottom:190px}
+
 .petal{
   position:absolute;
-  width:10px;
-  height:14px;
+  width:8px;
+  height:13px;
   background:#ff9fba;
   border-radius:70% 20% 70% 20%;
   animation:petalFall 5s linear infinite;
 }
+
 @keyframes petalFall{
   from{
     transform:translateY(-20px) rotate(0);
-    opacity:1;
   }
   to{
-    transform:translateY(260px) translateX(80px) rotate(450deg);
-    opacity:0;
+    transform:translateY(90vh) translateX(100px) rotate(450deg);
   }
-}
-
-/* Mild Breeze-blad */
-.breeze-leaf{
-  position:absolute;
-  width:12px;
-  height:18px;
-  background:#c9e08f;
-  border-radius:50% 10%;
-  opacity:.8;
-  transform:rotate(20deg);
-  animation:breezeDrift 6s linear infinite;
-}
-@keyframes breezeDrift{
-  from{transform:translateX(-40px) translateY(0) rotate(20deg);}
-  to{transform:translateX(260px) translateY(40px) rotate(80deg);}
-}
-
-/* Fertile Soil-glød */
-.soil-glow{
-  position:absolute;
-  inset:10% 5%;
-  border-radius:30px;
-  background:radial-gradient(circle,#ffd66a33,#ffd66a00 70%);
-  opacity:.8;
-}
-
-/* Calm Night-glimt */
-.calm-glow{
-  position:absolute;
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:#ffe9a8;
-  opacity:0;
-  animation:calmPulse 5s ease-in-out infinite;
-}
-@keyframes calmPulse{
-  0%,100%{opacity:0;}
-  50%{opacity:.9;}
 }
 
 /* =========================================================
-NATT
+   NATT
 ========================================================= */
+
 body.night{
   background:#18262d;
 }
+
 body.night .garden-shell{
   filter:brightness(.82);
 }
 
 /* =========================================================
-REBIRTH
+   REBIRTH
 ========================================================= */
+
 .rebirth-box{
   max-width:650px;
   margin:30px auto;
@@ -747,6 +877,7 @@ REBIRTH
   border-radius:25px;
   padding:30px;
 }
+
 .rebirth-btn{
   padding:15px 30px;
   border-radius:14px;
@@ -756,81 +887,87 @@ REBIRTH
   font-size:20px;
 }
 
-/* Rebirth fade */
-.rebirth-overlay{
-  position:fixed;
-  inset:0;
-  background:#000;
-  opacity:0;
-  pointer-events:none;
-  z-index:9000;
-  transition:opacity .8s;
-}
-.rebirth-overlay.show{
-  opacity:1;
-}
-
 /* =========================================================
-RESPONSIV
+   RESPONSIV
 ========================================================= */
+
 @media(max-width:1150px){
+
   .page{
     width:calc(100% - 30px);
   }
+
   .plots{
     grid-template-columns:repeat(4,1fr);
   }
+
   .garden-layout{
     grid-template-columns:1fr;
   }
+
   .side-menu{
     position:static;
     display:grid;
     grid-template-columns:repeat(3,1fr);
   }
 }
+
 @media(max-width:850px){
+
   .topbar{
     height:auto;
     flex-wrap:wrap;
   }
+
   .brand{
     min-width:0;
   }
+
   .top-stats{
     order:3;
     width:100%;
     overflow:auto;
   }
+
   .info-grid{
     grid-template-columns:1fr;
   }
+
   .plots{
     grid-template-columns:repeat(2,1fr);
   }
+
   .garden-inner{
     padding:15px;
   }
+
   .garden-shell{
     padding:14px;
   }
+
   .side-menu{
     grid-template-columns:1fr;
   }
 }
+
 @media(max-width:500px){
+
   .brand h1{
     font-size:24px;
   }
+
   .logo{
     font-size:36px;
   }
+
   .plots{
     grid-template-columns:1fr;
   }
+
   .plot{
     min-height:190px;
   }
+
   .modal{
     inset:1vh 1vw;
     padding:18px;
@@ -838,281 +975,377 @@ RESPONSIV
 }
 </style>
 </head>
+
 <body>
 
-<!-- Rebirth overlay -->
-<div id="rebirthOverlay" class="rebirth-overlay"></div>
-
 <!-- =========================================================
-START
+     START
 ========================================================= -->
+
 <div id="startScreen" class="home">
+
   <div class="home-box">
+
     <div class="home-logo">🌿</div>
+
     <h1>Zen Garden</h1>
-    <p>V5.6 • Bygg din eigen Zen-hage</p>
+
+    <p>V5.5 • Bygg din egen Zen-hage</p>
+
     <div id="newGameArea">
+
       <input
         id="nicknameInput"
         class="name-input"
         maxlength="20"
-        placeholder="Skriv kallenamnet ditt..."
+        placeholder="Skriv kallenavnet ditt..."
       >
+
       <button class="start-btn" onclick="startGame()">
         🌱 Start Zen Garden
       </button>
+
     </div>
+
     <div id="existingArea" class="hidden">
+
       <p>
-        Velkomen tilbake,
+        Velkommen tilbake,
         <b id="savedName"></b>
         🌿
       </p>
+
       <button class="start-btn" onclick="startGame()">
         🌱 Fortsett hagen
       </button>
+
       <div class="home-buttons">
+
         <button onclick="resetProgress()">
-          🔄 Nullstill framgang
+          🔄 Nullstill fremgang
         </button>
+
         <button onclick="changeName()">
-          ✏️ Byt kallenamn
+          ✏️ Bytt kallenavn
         </button>
+
       </div>
+
     </div>
+
   </div>
+
 </div>
 
+
 <!-- =========================================================
-GAME
+     GAME
 ========================================================= -->
+
 <div id="game" class="hidden">
-  <header class="topbar">
-    <div class="brand">
-      <div class="logo">🌿</div>
-      <div>
-        <h1>
-          Zen Garden •
-          <span id="brandName">OLO</span>
-        </h1>
-        <small>V5.6 • Zen Garden</small>
-      </div>
+
+<header class="topbar">
+
+  <div class="brand">
+
+    <div class="logo">🌿</div>
+
+    <div>
+      <h1>
+        Zen Garden •
+        <span id="brandName">OLO</span>
+      </h1>
+
+      <small>V5.5 • Zen Garden</small>
     </div>
-    <div class="top-stats">
-      <div class="stat">
-        💰 <span id="moneyDisplay">0</span>
-      </div>
-      <div class="stat">
-        🌱 <span id="plotDisplay">1/30</span>
-      </div>
-      <div class="stat">
-        🔄 <span id="rebirthDisplay">0</span>
-      </div>
-      <div class="stat">
-        <span id="timeIcon">☀️</span>
-        <span id="timeText">Dag</span>
-      </div>
+
+  </div>
+
+
+  <div class="top-stats">
+
+    <div class="stat">
+      💰 <span id="moneyDisplay">0</span>
     </div>
-    <button
-      class="hamburger"
-      onclick="showHomeMenu()"
-      title="Meny"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </header>
 
-  <main class="page">
+    <div class="stat">
+      🌱 <span id="plotDisplay">1/30</span>
+    </div>
 
-    <!-- =======================================================
-    INFO
-    ======================================================== -->
-    <section class="info-grid">
-      <div class="info-card">
-        <div class="info-title">
-          🌦️ Vêr
-        </div>
-        <div class="weather-main">
-          <span id="weatherIcon">☀️</span>
-          <span
-            class="weather-name"
-            id="weatherName"
-          >
-            Klårvêr
-          </span>
-        </div>
-        <div class="info-sub">
-          Neste vêr om
-          <span id="weatherTimer">--</span>s
-        </div>
+    <div class="stat">
+      🔄 <span id="rebirthDisplay">0</span>
+    </div>
+
+    <div class="stat">
+      <span id="timeIcon">☀️</span>
+      <span id="timeText">Dag</span>
+    </div>
+
+  </div>
+
+
+  <button
+    class="hamburger"
+    onclick="showHomeMenu()"
+    title="Meny"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+</header>
+
+
+<main class="page">
+
+  <!-- INFO -->
+
+  <section class="info-grid">
+
+    <div class="info-card">
+
+      <div class="info-title">
+        🌦️ Vær
       </div>
 
-      <div class="info-card">
-        <div class="info-title">
-          👑 Boss
-        </div>
-        <div class="boss-name">
-          <span id="bossIcon">🗿</span>
-          <span id="bossName">
-            Garden Guardian
-          </span>
-        </div>
-        <div class="boss-bar">
-          <div
-            class="boss-fill"
-            id="bossFill"
-          ></div>
-        </div>
-        <div class="boss-meta">
-          <span id="bossHP">5 000</span>
-          HP • pengar = skade
-        </div>
-      </div>
+      <div class="weather-main">
 
-      <div class="info-card">
-        <div class="info-title">
-          🎉 Event
-        </div>
-        <div
-          class="event-main"
-          id="eventText"
+        <span id="weatherIcon">☀️</span>
+
+        <span
+          class="weather-name"
+          id="weatherName"
         >
-          🎉 Ingen Event akkurat no.
-        </div>
+          Klar
+        </span>
+
+      </div>
+
+      <div class="info-sub">
+        Neste vær om
+        <span id="weatherTimer">--</span>s
+      </div>
+
+    </div>
+
+
+    <div class="info-card">
+
+      <div class="info-title">
+        👑 Boss
+      </div>
+
+      <div class="boss-name">
+
+        <span id="bossIcon">🗿</span>
+
+        <span id="bossName">
+          Garden Guardian
+        </span>
+
+      </div>
+
+      <div class="boss-bar">
+
         <div
-          class="info-sub"
-          id="eventTimer"
+          class="boss-fill"
+          id="bossFill"
         ></div>
+
       </div>
-    </section>
 
-    <!-- =======================================================
-    GARDEN
-    ======================================================== -->
-    <section class="garden-shell">
-      <div class="garden-inner">
-        <div id="weatherLayer"></div>
-        <div id="eventVisual"></div>
+      <div class="boss-meta">
 
-        <div class="garden-layout">
-          <div
-            id="plots"
-            class="plots"
-          ></div>
+        <span id="bossHP">5 000</span>
+        HP • penger = DMG
 
-          <!-- HØGRE MENY -->
-          <aside class="side-menu">
-            <button
-              class="side-btn"
-              onclick="openShop()"
-            >
-              <span class="big">
-                🛒 Zen Shop
-              </span>
-              <small>
-                Frø og planter
-              </small>
-            </button>
-
-            <button
-              class="side-btn"
-              onclick="openPets()"
-            >
-              <span class="big">
-                🐾 Zen-kjeledyr
-              </span>
-              <small>
-                Kjøp og utstyr
-              </small>
-            </button>
-
-            <button
-              class="side-btn"
-              onclick="openUpgrades()"
-            >
-              <span class="big">
-                ⚡ Zen Upgrades
-              </span>
-              <small>
-                Oppgrader hagen
-              </small>
-            </button>
-
-            <button
-              class="side-btn"
-              onclick="openBoss()"
-            >
-              <span class="big">
-                👑 Boss
-              </span>
-              <small>
-                Boss og spirit-kjeledyr
-              </small>
-            </button>
-
-            <button
-              class="side-btn"
-              onclick="openRebirth()"
-            >
-              <span class="big">
-                🔄 Rebirth
-              </span>
-              <small>
-                Start på nytt sterkare
-              </small>
-            </button>
-          </aside>
-        </div>
       </div>
-    </section>
 
-  </main>
+    </div>
+
+
+    <div class="info-card">
+
+      <div class="info-title">
+        🎉 Event
+      </div>
+
+      <div
+        class="event-main"
+        id="eventText"
+      >
+        🎉 Ingen Event akkurat nå.
+      </div>
+
+      <div
+        class="info-sub"
+        id="eventTimer"
+      ></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HAGE -->
+
+  <section class="garden-shell">
+
+    <div class="garden-inner">
+
+      <div class="garden-layout">
+
+        <div
+          id="plots"
+          class="plots"
+        ></div>
+
+
+        <!-- HØYRE MENY -->
+
+        <aside class="side-menu">
+
+          <button
+            class="side-btn"
+            onclick="openShop()"
+          >
+            <span class="big">
+              🛒 Zen Shop
+            </span>
+
+            <small>
+              Frø og planter
+            </small>
+          </button>
+
+
+          <button
+            class="side-btn"
+            onclick="openPets()"
+          >
+            <span class="big">
+              🐾 Zen-kjæledyr
+            </span>
+
+            <small>
+              Kjøp og utstyr
+            </small>
+          </button>
+
+
+          <button
+            class="side-btn"
+            onclick="openUpgrades()"
+          >
+            <span class="big">
+              ⚡ Zen Upgrades
+            </span>
+
+            <small>
+              Oppgrader hagen
+            </small>
+          </button>
+
+
+          <button
+            class="side-btn"
+            onclick="openBoss()"
+          >
+            <span class="big">
+              👑 Boss
+            </span>
+
+            <small>
+              Boss og spirit-kjæledyr
+            </small>
+          </button>
+
+
+          <button
+            class="side-btn"
+            onclick="openRebirth()"
+          >
+            <span class="big">
+              🔄 Rebirth
+            </span>
+
+            <small>
+              Start på nytt sterkere
+            </small>
+          </button>
+
+        </aside>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
 </div>
 
-<!-- =========================================================
-MODAL
-========================================================= -->
+
+<!-- VÆR -->
+
+<div id="weatherLayer"></div>
+
+<!-- EVENT -->
+
+<div id="eventVisual"></div>
+
+<!-- MODAL -->
+
 <div
   id="modal"
   class="modal hidden"
 >
+
   <div class="modal-head">
+
     <h2 id="modalTitle">
       Zen
     </h2>
+
     <button
       class="close"
       onclick="closeModal()"
     >
       ×
     </button>
+
   </div>
+
   <div id="modalContent"></div>
+
 </div>
 
-<!-- =========================================================
-TOAST
-========================================================= -->
+<!-- TOAST -->
+
 <div id="toast"></div>
+
 
 <script>
 "use strict";
 
 /* =========================================================
-KONSTANTAR
+   KONSTANTER
 ========================================================= */
+
 const SAVE_KEY="zenGardenSave";
 const NICKNAME_KEY="zenGardenNickname";
-const SAVE_VERSION=5.6;
+const SAVE_VERSION=5.5;
 const MAX_PLOTS=30;
-const MAX_OFFLINE_MS=8*60*60*1000;
+
 
 /* =========================================================
-PLANTAR
+   PLANTER
 ========================================================= */
+
 const SEEDS=[
+
   {
     id:"carrot",
     name:"Gulrot",
@@ -1122,24 +1355,27 @@ const SEEDS=[
     time:15,
     value:45
   },
+
   {
     id:"clover",
-    name:"Klar",
+    name:"Firkløver",
     icon:"🍀",
     rarity:"Common",
     price:120,
     time:22,
     value:170
   },
+
   {
     id:"flower",
-    name:"Blome",
+    name:"Blomst",
     icon:"🌷",
     rarity:"Common",
     price:180,
     time:27,
     value:245
   },
+
   {
     id:"strawberry",
     name:"Jordbær",
@@ -1149,6 +1385,7 @@ const SEEDS=[
     time:32,
     value:350
   },
+
   {
     id:"berry",
     name:"Bær",
@@ -1158,6 +1395,7 @@ const SEEDS=[
     time:38,
     value:500
   },
+
   {
     id:"sunflower",
     name:"Solsikke",
@@ -1167,6 +1405,7 @@ const SEEDS=[
     time:45,
     value:720
   },
+
   {
     id:"apple",
     name:"Eple",
@@ -1176,6 +1415,7 @@ const SEEDS=[
     time:52,
     value:950
   },
+
   {
     id:"pear",
     name:"Pære",
@@ -1185,6 +1425,7 @@ const SEEDS=[
     time:58,
     value:1200
   },
+
   {
     id:"lemon",
     name:"Sitron",
@@ -1194,6 +1435,7 @@ const SEEDS=[
     time:64,
     value:1500
   },
+
   {
     id:"cherry",
     name:"Kirsebær",
@@ -1203,6 +1445,7 @@ const SEEDS=[
     time:72,
     value:2000
   },
+
   {
     id:"lavender",
     name:"Lavendel",
@@ -1212,6 +1455,7 @@ const SEEDS=[
     time:80,
     value:2550
   },
+
   {
     id:"lotus",
     name:"Lotus",
@@ -1221,6 +1465,7 @@ const SEEDS=[
     time:90,
     value:3200
   },
+
   {
     id:"peach",
     name:"Fersken",
@@ -1230,6 +1475,7 @@ const SEEDS=[
     time:100,
     value:4000
   },
+
   {
     id:"cocoa",
     name:"Kakao",
@@ -1239,6 +1485,7 @@ const SEEDS=[
     time:110,
     value:5100
   },
+
   {
     id:"grape",
     name:"Druer",
@@ -1248,6 +1495,7 @@ const SEEDS=[
     time:122,
     value:6500
   },
+
   {
     id:"mango",
     name:"Mango",
@@ -1257,6 +1505,7 @@ const SEEDS=[
     time:135,
     value:8200
   },
+
   {
     id:"sakura",
     name:"Sakura",
@@ -1266,6 +1515,7 @@ const SEEDS=[
     time:150,
     value:10500
   },
+
   {
     id:"crystal",
     name:"Krystall",
@@ -1275,6 +1525,7 @@ const SEEDS=[
     time:170,
     value:14500
   },
+
   {
     id:"moonlily",
     name:"Månelilje",
@@ -1284,6 +1535,7 @@ const SEEDS=[
     time:190,
     value:19000
   },
+
   {
     id:"star_tree",
     name:"Stjernetreet",
@@ -1293,15 +1545,17 @@ const SEEDS=[
     time:215,
     value:24500
   },
+
   {
     id:"dream_flower",
-    name:"Draumblome",
+    name:"Drømmeblomst",
     icon:"🌺",
     rarity:"Mythical",
     price:20000,
     time:240,
     value:30500
   },
+
   {
     id:"dragon_fruit",
     name:"Dragefrukt",
@@ -1311,15 +1565,17 @@ const SEEDS=[
     time:270,
     value:39000
   },
+
   {
     id:"infinity_tree",
-    name:"Uendeleg tre",
+    name:"Uendelig tre",
     icon:"♾️",
     rarity:"Exotic",
     price:32000,
     time:310,
     value:50000
   },
+
   {
     id:"celestial_lotus",
     name:"Himmelsk lotus",
@@ -1329,6 +1585,7 @@ const SEEDS=[
     time:360,
     value:64000
   },
+
   {
     id:"world_tree",
     name:"Verdstreet",
@@ -1338,6 +1595,7 @@ const SEEDS=[
     time:420,
     value:90000
   },
+
   {
     id:"ancient_zen_tree",
     name:"Det eldgamle Zen-treet",
@@ -1347,12 +1605,16 @@ const SEEDS=[
     time:500,
     value:125000
   }
+
 ];
 
+
 /* =========================================================
-KJELEDYR
+   KJÆLEDYR
 ========================================================= */
+
 const PETS=[
+
   {
     id:"snail",
     name:"Snegl",
@@ -1362,24 +1624,27 @@ const PETS=[
     bonus:"+5% vekst",
     growth:.05
   },
+
   {
     id:"bee",
     name:"Honningbie",
     icon:"🐝",
     rarity:"Common",
     price:900,
-    bonus:"+5% pengar",
+    bonus:"+5% penger",
     money:.05
   },
+
   {
     id:"butterfly",
-    name:"Sommarfugl",
+    name:"Sommerfugl",
     icon:"🦋",
     rarity:"Uncommon",
     price:1800,
     bonus:"+5% mutasjon",
     mutation:.05
   },
+
   {
     id:"rabbit",
     name:"Kanin",
@@ -1389,24 +1654,27 @@ const PETS=[
     bonus:"+8% vekst",
     growth:.08
   },
+
   {
     id:"frog",
     name:"Frosk",
     icon:"🐸",
     rarity:"Rare",
     price:4000,
-    bonus:"+35% regnlengd",
+    bonus:"+35% regnlengde",
     rain:.35
   },
+
   {
     id:"spirit_fox",
-    name:"Ånde-rev",
+    name:"Ånderev",
     icon:"🦊",
     rarity:"Epic",
     price:7000,
-    bonus:"+8% pengar",
+    bonus:"+8% penger",
     money:.08
   },
+
   {
     id:"owl",
     name:"Ugle",
@@ -1416,6 +1684,7 @@ const PETS=[
     bonus:"+15% nattvekst",
     night:.15
   },
+
   {
     id:"tiny_dragon",
     name:"Liten drage",
@@ -1425,21 +1694,26 @@ const PETS=[
     bonus:"+10% boss-skade",
     boss:.10
   },
+
   {
     id:"garden_unicorn",
-    name:"Hage-einhjørning",
+    name:"Hageenhjørning",
     icon:"🦄",
     rarity:"Legendary",
     price:35000,
     bonus:"+10% alt",
     all:.10
   }
+
 ];
 
+
 /* =========================================================
-BOSS-KJELEDYR
+   BOSS-KJÆLEDYR
 ========================================================= */
+
 const BOSS_PETS=[
+
   {
     id:"guardian_spirit",
     name:"Guardian Spirit",
@@ -1448,14 +1722,16 @@ const BOSS_PETS=[
     bonus:"+5% vekst",
     growth:.05
   },
+
   {
     id:"stone_spirit",
     name:"Stone Spirit",
     icon:"🪨",
     rarity:"Rare",
-    bonus:"+8% pengar",
+    bonus:"+8% penger",
     money:.08
   },
+
   {
     id:"shadow_spirit",
     name:"Shadow Spirit",
@@ -1464,6 +1740,7 @@ const BOSS_PETS=[
     bonus:"+8% mutasjon",
     mutation:.08
   },
+
   {
     id:"dragon_spirit",
     name:"Dragon Spirit",
@@ -1472,6 +1749,7 @@ const BOSS_PETS=[
     bonus:"+10% boss-skade",
     boss:.10
   },
+
   {
     id:"ancient_spirit",
     name:"Ancient Spirit",
@@ -1480,6 +1758,7 @@ const BOSS_PETS=[
     bonus:"+10% vekst",
     growth:.10
   },
+
   {
     id:"zen_king_spirit",
     name:"Zen King Spirit",
@@ -1488,12 +1767,16 @@ const BOSS_PETS=[
     bonus:"+12% alt",
     all:.12
   }
+
 ];
 
+
 /* =========================================================
-BOSSAR
+   BOSSer
 ========================================================= */
+
 const BOSSES=[
+
   {
     id:"guardian",
     name:"Garden Guardian",
@@ -1502,6 +1785,7 @@ const BOSSES=[
     reward:2000,
     pet:"guardian_spirit"
   },
+
   {
     id:"stone",
     name:"Stone Giant",
@@ -1510,6 +1794,7 @@ const BOSSES=[
     reward:7500,
     pet:"stone_spirit"
   },
+
   {
     id:"shadow",
     name:"Shadow Lord",
@@ -1518,6 +1803,7 @@ const BOSSES=[
     reward:20000,
     pet:"shadow_spirit"
   },
+
   {
     id:"dragon",
     name:"Dragon Lord",
@@ -1526,6 +1812,7 @@ const BOSSES=[
     reward:50000,
     pet:"dragon_spirit"
   },
+
   {
     id:"ancient",
     name:"Ancient One",
@@ -1534,6 +1821,7 @@ const BOSSES=[
     reward:150000,
     pet:"ancient_spirit"
   },
+
   {
     id:"zenking",
     name:"Zen King",
@@ -1542,54 +1830,67 @@ const BOSSES=[
     reward:500000,
     pet:"zen_king_spirit"
   }
+
 ];
 
+
 /* =========================================================
-VÊR
+   VÆR
 ========================================================= */
+
 const WEATHER={
+
   Clear:{
     icon:"☀️",
-    name:"Klårvêr",
+    name:"Klar",
     growth:1,
     value:1
   },
+
   Rain:{
     icon:"🌧️",
     name:"Regn",
     growth:1.25,
     value:1.1
   },
+
   Storm:{
     icon:"⛈️",
     name:"Storm",
     growth:1.4,
     value:1.2
   },
+
   Frost:{
     icon:"❄️",
     name:"Frost",
     growth:.65,
     value:.8
   },
+
   Fog:{
     icon:"🌫️",
     name:"Tåke",
     growth:.9,
     value:.95
   },
+
   Rainbow:{
     icon:"🌈",
-    name:"Rainbow",
+    name:"Regnbue",
     growth:1.6,
     value:1.5
   }
+
 };
 
+
 /* =========================================================
-EVENT
+   EVENT
 ========================================================= */
+
 const EVENTS={
+
   sakura:{
     id:"sakura",
     name:"Sakura",
@@ -1597,13 +1898,14 @@ const EVENTS={
     chance:.001,
     min:60,
     max:120,
-    text:"🌸 Vekst ×1,7 • nattvekst ×2 • pengar ×1,5 • boss-skade ×2 • mutasjonsbonus +10%",
+    text:"🌸 Vekst ×1,7 • nattvekst ×2 • penger ×1,5 • boss-skade ×2 • mutasjon +10%",
     growth:1.7,
     nightGrowth:2,
     money:1.5,
     boss:2,
     mutation:.10
   },
+
   golden:{
     id:"golden",
     name:"Golden Breeze",
@@ -1611,9 +1913,10 @@ const EVENTS={
     chance:.0018,
     min:45,
     max:90,
-    text:"🍃 Pengar ×2",
+    text:"🍃 Penger ×2",
     money:2
   },
+
   firefly:{
     id:"firefly",
     name:"Firefly Night",
@@ -1624,6 +1927,7 @@ const EVENTS={
     text:"✨ Nattvekst ×2",
     nightGrowth:2
   },
+
   koi:{
     id:"koi",
     name:"Koi Blessing",
@@ -1634,106 +1938,97 @@ const EVENTS={
     text:"🐟 Mutasjonsbonus +12%",
     mutation:.12
   }
+
 };
 
-/* =========================================================
-MINI-EVENTS (V5.6)
-========================================================= */
-const MINI_EVENTS={
-  mild_breeze:{
-    id:"mild_breeze",
-    name:"Mild Breeze",
-    icon:"🍂",
-    chance:.01,
-    min:20,
-    max:40,
-    text:"🍂 Mild Breeze • +5% vekst",
-    growth:1.05
-  },
-  fertile_soil:{
-    id:"fertile_soil",
-    name:"Fertile Soil",
-    icon:"🪴",
-    chance:.008,
-    min:25,
-    max:45,
-    text:"🪴 Fertile Soil • +8% planteverdi",
-    value:1.08
-  },
-  calm_night:{
-    id:"calm_night",
-    name:"Calm Night",
-    icon:"✨",
-    chance:.009,
-    min:30,
-    max:50,
-    text:"✨ Calm Night • +10% nattvekst",
-    nightGrowth:1.10
-  }
-};
 
 /* =========================================================
-UPGRADES
+   UPGRADES
 ========================================================= */
+
 const UPGRADE_INFO={
+
   petSlots:{
-    name:"Kjeledyr-slots",
+    name:"Kjæledyr-slots",
     icon:"🐾",
-    desc:"Kor mange vanlege kjeledyr du kan utstyre.",
+    desc:"Hvor mange vanlige kjæledyr du kan utstyre.",
     cost:[1000,3000,8000,18000,40000]
   },
+
   fasterGrowth:{
-    name:"Raskare vekst",
+    name:"Raskere vekst",
     icon:"⚡",
     desc:"+10% vekst per nivå.",
     cost:[800,2000,5000,12000,25000]
   },
+
   shorterGrowth:{
-    name:"Kortare plantevekst",
+    name:"Kortere plantevekst",
     icon:"⏱️",
-    desc:"Gjer nødvendig veksttid kortare.",
+    desc:"Gjør nødvendig veksttid kortere.",
     cost:[1000,2500,6000,15000,30000]
   },
+
   betterWeather:{
-    name:"Betre vêr",
+    name:"Bedre vær",
     icon:"🌦️",
-    desc:"Aukar sjansen for gode vêrtypar.",
+    desc:"Øker sjansen for gode værtyper.",
     cost:[1200,3000,7000,16000,35000]
   },
+
   mutationChance:{
     name:"Mutation-sjanse",
     icon:"✨",
-    desc:"Aukar sjansen for mutasjon.",
+    desc:"Øker sjansen for mutasjon.",
     cost:[1500,4000,9000,20000,45000]
   },
+
   moneyMultiplier:{
     name:"Pengemultiplikator",
     icon:"💰",
-    desc:"Aukar kor mykje pengar du får.",
+    desc:"Øker hvor mye penger du får.",
     cost:[2000,5000,12000,30000,60000]
   }
+
 };
 
+
 /* =========================================================
-STATE
+   STATE
 ========================================================= */
+
 let state=createFreshState();
 let gameRunning=false;
 let tickTimer=null;
+let lastRender=0;
+
 
 function createFreshState(){
-  const now=Date.now();
+
   return {
+
     version:SAVE_VERSION,
+
     username:"",
+
     money:1000,
+
     rebirths:0,
+
     plots:1,
+
     plants:Array(MAX_PLOTS).fill(null),
-    inventory:{},
+
+    inventory:{
+      carrot:0
+    },
+
     ownedPets:[],
+
     activePets:[],
+
     defeatedBosses:[],
+
     upgrades:{
       petSlots:0,
       fasterGrowth:0,
@@ -1742,1138 +2037,3403 @@ function createFreshState(){
       mutationChance:0,
       moneyMultiplier:0
     },
+
     weather:"Clear",
-    weatherEnds:now+60000,
+
+    weatherEnds:Date.now()+60000,
+
     dayTime:.25,
+
     currentBossHP:null,
+
     needsRebirth:false,
+
     activeEvent:null,
+
     eventEnds:0,
-    lastEventMinute:Math.floor(now/60000),
-    activeMiniEvent:null,
-    miniEventEnds:0,
-    lastMiniEventMinute:Math.floor(now/60000),
-    lastTick:now
+
+    lastEventMinute:Math.floor(Date.now()/60000),
+
+    lastTick:Date.now()
+
   };
 }
 
+
 /* =========================================================
-HJELPEFUNKSJONAR
+   HJELPEFUNKSJONER
 ========================================================= */
+
 function fmt(n){
   return Math.floor(n).toLocaleString("nb-NO");
 }
+
 function getSeed(id){
   return SEEDS.find(x=>x.id===id);
 }
+
 function getPet(id){
-  return PETS.find(x=>x.id===id) || BOSS_PETS.find(x=>x.id===id);
+  return SEEDS.find(x=>x.id===id)
+    ?null
+    :PETS.find(x=>x.id===id)
+    ||BOSS_PETS.find(x=>x.id===id);
 }
+
 function rarityClass(r){
   return String(r).toLowerCase();
 }
+
 function randomInt(min,max){
-  return Math.floor(Math.random()*(max-min+1))+min;
+  return Math.floor(
+    Math.random()*(max-min+1)
+  )+min;
 }
+
 function clamp(n,min,max){
   return Math.max(min,Math.min(max,n));
 }
+
 function weightedChoice(items){
-  const total=items.reduce((sum,item)=>sum+item.weight,0);
+
+  const total=items.reduce(
+    (sum,item)=>sum+item.weight,
+    0
+  );
+
   let roll=Math.random()*total;
+
   for(const item of items){
+
     roll-=item.weight;
-    if(roll<=0) return item.item;
+
+    if(roll<=0){
+      return item.item;
+    }
+
   }
+
   return items[items.length-1].item;
 }
 
+
 /* =========================================================
-SAVE / LOAD
+   SAVE
 ========================================================= */
+
 function save(){
-  const safeState={...state};
-  safeState.version=SAVE_VERSION;
-  try{
-    localStorage.setItem(SAVE_KEY,JSON.stringify(safeState));
-    localStorage.setItem(NICKNAME_KEY,safeState.username||"");
-  }catch(e){
-    console.warn("Kunne ikkje lagre:",e);
-  }
+
+  state.version=SAVE_VERSION;
+  state.lastTick=Date.now();
+
+  localStorage.setItem(
+    SAVE_KEY,
+    JSON.stringify(state)
+  );
+
+  localStorage.setItem(
+    NICKNAME_KEY,
+    state.username||""
+  );
 }
 
-function load(){
-  const rawStr=localStorage.getItem(SAVE_KEY);
-  if(!rawStr){
-    state=createFreshState();
-    return;
-  }
-  let raw;
-  try{
-    raw=JSON.parse(rawStr);
-  }catch(e){
-    state=createFreshState();
-    return;
-  }
-  if(!raw || typeof raw!=="object"){
-    state=createFreshState();
-    return;
-  }
+
+/* =========================================================
+   MIGRERING
+========================================================= */
+
+function migrate(raw){
+
   const fresh=createFreshState();
-  const s={...fresh,...raw};
+
+  if(!raw || typeof raw!=="object"){
+    return fresh;
+  }
+
+  const s={
+    ...fresh,
+    ...raw
+  };
 
   s.version=SAVE_VERSION;
 
-  if(typeof s.money!=="number" || !isFinite(s.money) || s.money<0){
-    s.money=fresh.money;
-  }
-  if(typeof s.rebirths!=="number" || s.rebirths<0){
-    s.rebirths=fresh.rebirths;
-  }
-  if(typeof s.plots!=="number" || s.plots<1 || s.plots>MAX_PLOTS){
-    s.plots=fresh.plots;
-  }
+  s.username=
+    raw.username
+    ||localStorage.getItem(NICKNAME_KEY)
+    ||"";
 
-  if(!Array.isArray(s.plants) || s.plants.length!==MAX_PLOTS){
-    s.plants=fresh.plants;
-  }else{
-    s.plants=s.plants.map(p=>{
-      if(!p) return null;
-      if(typeof p.id!=="string" || !getSeed(p.id)) return null;
-      if(typeof p.plantedAt!=="number" || !isFinite(p.plantedAt)) return null;
-      return {id:p.id,plantedAt:p.plantedAt,mutated:!!p.mutated};
-    });
-  }
+  s.money=Number(raw.money)||0;
 
-  if(typeof s.inventory!=="object" || !s.inventory){
-    s.inventory=fresh.inventory;
-  }
+  s.rebirths=Number(raw.rebirths)||0;
 
-  if(!Array.isArray(s.ownedPets)) s.ownedPets=[];
-  s.ownedPets=[...new Set(s.ownedPets.filter(id=>getPet(id)))];
+  if(raw.plots!=null){
 
-  if(!Array.isArray(s.activePets)) s.activePets=[];
-  s.activePets=s.activePets.filter(id=>getPet(id));
-  const slots=getPetSlots(s);
-  if(s.activePets.length>slots){
-    s.activePets=s.activePets.slice(0,slots);
+    s.plots=clamp(
+      Number(raw.plots)||1,
+      1,
+      MAX_PLOTS
+    );
+
+  }else if(raw.unlockedSlots!=null){
+
+    s.plots=clamp(
+      Number(raw.unlockedSlots)||1,
+      1,
+      MAX_PLOTS
+    );
+
   }
 
-  if(!Array.isArray(s.defeatedBosses)) s.defeatedBosses=[];
-  s.defeatedBosses=[...new Set(s.defeatedBosses.filter(id=>BOSSES.find(b=>b.id===id)))];
+  s.plants=Array(MAX_PLOTS).fill(null);
 
-  if(typeof s.upgrades!=="object" || !s.upgrades){
-    s.upgrades=fresh.upgrades;
-  }else{
-    for(const key of Object.keys(fresh.upgrades)){
-      const v=s.upgrades[key];
-      if(typeof v!=="number" || v<0 || v>UPGRADE_INFO[key].cost.length){
-        s.upgrades[key]=fresh.upgrades[key];
-      }
-    }
-  }
+  if(Array.isArray(raw.plants)){
 
-  if(!WEATHER[s.weather]){
-    s.weather="Clear";
-  }
-  if(typeof s.weatherEnds!=="number" || !isFinite(s.weatherEnds)){
-    s.weatherEnds=Date.now()+60000;
-  }
+    for(
+      let i=0;
+      i<Math.min(MAX_PLOTS,raw.plants.length);
+      i++
+    ){
 
-  if(typeof s.dayTime!=="number" || !isFinite(s.dayTime)){
-    s.dayTime=fresh.dayTime;
-  }
+      const p=raw.plants[i];
 
-  if(s.currentBossHP!=null){
-    const boss=getCurrentBoss(s);
-    if(!boss || typeof s.currentBossHP!=="number" || s.currentBossHP<0 || s.currentBossHP>boss.hp){
-      s.currentBossHP=null;
-    }
-  }
+      if(!p)continue;
 
-  if(s.activeEvent && !EVENTS[s.activeEvent]){
-    s.activeEvent=null;
-    s.eventEnds=0;
-  }
-  if(typeof s.eventEnds!=="number" || !isFinite(s.eventEnds)){
-    s.eventEnds=0;
-  }
-  if(s.activeEvent && s.eventEnds<Date.now()){
-    s.activeEvent=null;
-    s.eventEnds=0;
-  }
+      const seed=getSeed(
+        p.plantId
+        ||p.id
+        ||p.seedId
+      );
 
-  if(s.activeMiniEvent && !MINI_EVENTS[s.activeMiniEvent]){
-    s.activeMiniEvent=null;
-    s.miniEventEnds=0;
-  }
-  if(typeof s.miniEventEnds!=="number" || !isFinite(s.miniEventEnds)){
-    s.miniEventEnds=0;
-  }
-  if(s.activeMiniEvent && s.miniEventEnds<Date.now()){
-    s.activeMiniEvent=null;
-    s.miniEventEnds=0;
-  }
+      if(seed){
 
-  if(typeof s.lastTick!=="number" || !isFinite(s.lastTick)){
-    s.lastTick=Date.now();
-  }
+        s.plants[i]={
 
-  state=s;
-}
+          plantId:seed.id,
 
-/* =========================================================
-OFFLINE-PROGRESS
-========================================================= */
-function applyOfflineProgress(){
-  const now=Date.now();
-  const diff=clamp(now-state.lastTick,0,MAX_OFFLINE_MS);
-  if(diff<=0) return;
+          progress:Number(p.progress)||0,
 
-  for(let i=0;i<state.plants.length;i++){
-    const p=state.plants[i];
-    if(!p) continue;
-    p.plantedAt-=diff;
-  }
+          mutation:p.mutation||null
 
-  if(state.weatherEnds<now){
-    state.weather="Clear";
-    state.weatherEnds=now+60000;
-  }
-  if(state.activeEvent && state.eventEnds<now){
-    state.activeEvent=null;
-    state.eventEnds=0;
-    clearEventVisuals();
-  }
-  if(state.activeMiniEvent && state.miniEventEnds<now){
-    state.activeMiniEvent=null;
-    state.miniEventEnds=0;
-    clearEventVisuals();
-  }
-}
-
-/* =========================================================
-PET-SLOTS
-========================================================= */
-function getPetSlots(s=state){
-  return 1 + (s.upgrades?.petSlots||0);
-}
-
-/* =========================================================
-BOSS-HJELP
-========================================================= */
-function getCurrentBoss(s=state){
-  const defeated=new Set(s.defeatedBosses||[]);
-  const remaining=BOSSES.filter(b=>!defeated.has(b.id));
-  return remaining[0]||null;
-}
-
-/* =========================================================
-UI-RENDER
-========================================================= */
-const moneyDisplay=document.getElementById("moneyDisplay");
-const plotDisplay=document.getElementById("plotDisplay");
-const rebirthDisplay=document.getElementById("rebirthDisplay");
-const timeIcon=document.getElementById("timeIcon");
-const timeText=document.getElementById("timeText");
-const weatherIcon=document.getElementById("weatherIcon");
-const weatherName=document.getElementById("weatherName");
-const weatherTimer=document.getElementById("weatherTimer");
-const bossIcon=document.getElementById("bossIcon");
-const bossName=document.getElementById("bossName");
-const bossFill=document.getElementById("bossFill");
-const bossHP=document.getElementById("bossHP");
-const eventText=document.getElementById("eventText");
-const eventTimer=document.getElementById("eventTimer");
-const plotsEl=document.getElementById("plots");
-const weatherLayer=document.getElementById("weatherLayer");
-const eventVisual=document.getElementById("eventVisual");
-const rebirthOverlay=document.getElementById("rebirthOverlay");
-
-function renderAll(){
-  renderStats();
-  renderWeather();
-  renderBoss();
-  renderEvent();
-  renderPlots();
-}
-
-function renderStats(){
-  moneyDisplay.textContent=fmt(state.money);
-  plotDisplay.textContent=`${state.plots}/${MAX_PLOTS}`;
-  rebirthDisplay.textContent=fmt(state.rebirths);
-  const isNight=state.dayTime>=0.5;
-  document.body.classList.toggle("night",isNight);
-  timeIcon.textContent=isNight?"🌙":"☀️";
-  timeText.textContent=isNight?"Natt":"Dag";
-}
-
-function renderWeather(){
-  const w=WEATHER[state.weather];
-  weatherIcon.textContent=w.icon;
-  weatherName.textContent=w.name;
-  const remaining=Math.max(0,Math.floor((state.weatherEnds-Date.now())/1000));
-  weatherTimer.textContent=remaining;
-
-  clearWeatherVisuals();
-  if(state.weather==="Rain"){
-    spawnRainVisuals();
-  }else if(state.weather==="Rainbow"){
-    spawnRainbowVisual();
-  }else if(state.weather==="Storm"){
-    spawnStormVisual();
-  }else if(state.weather==="Frost"){
-    spawnFrostVisual();
-  }else if(state.weather==="Fog"){
-    spawnFogVisual();
-  }
-}
-
-function clearWeatherVisuals(){
-  while(weatherLayer.firstChild){
-    weatherLayer.removeChild(weatherLayer.firstChild);
-  }
-}
-
-function spawnRainVisuals(){
-  const count=40;
-  const rect=weatherLayer.getBoundingClientRect();
-  const width=rect.width||800;
-  for(let i=0;i<count;i++){
-    const drop=document.createElement("div");
-    drop.className="rain-drop";
-    const x=Math.random()*width;
-    drop.style.left=x+"px";
-    drop.style.top=(Math.random()*40-40)+"px";
-    weatherLayer.appendChild(drop);
-  }
-}
-
-function spawnRainbowVisual(){
-  const arc=document.createElement("div");
-  arc.className="rainbow-arc";
-  weatherLayer.appendChild(arc);
-}
-
-function spawnStormVisual(){
-  const flash=document.createElement("div");
-  flash.className="storm-flash";
-  weatherLayer.appendChild(flash);
-}
-
-function spawnFrostVisual(){
-  const count=25;
-  const rect=weatherLayer.getBoundingClientRect();
-  const width=rect.width||800;
-  for(let i=0;i<count;i++){
-    const c=document.createElement("div");
-    c.className="frost-crystal";
-    const x=Math.random()*width;
-    c.style.left=x+"px";
-    c.style.top=(Math.random()*40-40)+"px";
-    weatherLayer.appendChild(c);
-  }
-}
-
-function spawnFogVisual(){
-  const fog=document.createElement("div");
-  fog.className="fog-band";
-  weatherLayer.appendChild(fog);
-}
-
-function renderBoss(){
-  const boss=getCurrentBoss();
-  if(!boss){
-    bossIcon.textContent="✅";
-    bossName.textContent="Alle bossar slått";
-    bossFill.style.width="0%";
-    bossHP.textContent="0";
-    return;
-  }
-  bossIcon.textContent=boss.icon;
-  bossName.textContent=boss.name;
-  const hp=state.currentBossHP==null?boss.hp:state.currentBossHP;
-  const pct=clamp(100*(1-hp/boss.hp),0,100);
-  bossFill.style.width=pct+"%";
-  bossHP.textContent=fmt(hp);
-}
-
-function renderEvent(){
-  if(state.activeEvent){
-    const ev=EVENTS[state.activeEvent];
-    if(!ev){
-      state.activeEvent=null;
-      state.eventEnds=0;
-      clearEventVisuals();
-    }else{
-      const remaining=Math.max(0,state.eventEnds-Date.now());
-      const mm=Math.floor(remaining/60000);
-      const ss=Math.floor((remaining%60000)/1000);
-      const timerStr=`${mm}:${String(ss).padStart(2,"0")}`;
-      eventText.textContent=`${ev.icon} ${ev.text}`;
-      eventTimer.textContent=`Event sluttar om ${timerStr}`;
-      renderEventVisual(ev);
-      return;
-    }
-  }
-
-  if(state.activeMiniEvent){
-    const mev=MINI_EVENTS[state.activeMiniEvent];
-    if(!mev){
-      state.activeMiniEvent=null;
-      state.miniEventEnds=0;
-      clearEventVisuals();
-    }else{
-      const remaining=Math.max(0,state.miniEventEnds-Date.now());
-      const mm=Math.floor(remaining/60000);
-      const ss=Math.floor((remaining%60000)/1000);
-      const timerStr=`${mm}:${String(ss).padStart(2,"0")}`;
-      eventText.textContent=`${mev.icon} ${mev.text}`;
-      eventTimer.textContent=`Mini-event sluttar om ${timerStr}`;
-      renderMiniEventVisual(mev);
-      return;
-    }
-  }
-
-  eventText.textContent="🎉 Ingen Event akkurat no.";
-  eventTimer.textContent="";
-  clearEventVisuals();
-}
-
-function clearEventVisuals(){
-  while(eventVisual.firstChild){
-    eventVisual.removeChild(eventVisual.firstChild);
-  }
-}
-
-function renderEventVisual(ev){
-  clearEventVisuals();
-  if(ev.id==="sakura"){
-    const count=35;
-    const rect=eventVisual.getBoundingClientRect();
-    const width=rect.width||800;
-    for(let i=0;i<count;i++){
-      const p=document.createElement("div");
-      p.className="petal";
-      const x=Math.random()*width;
-      p.style.left=x+"px";
-      p.style.top=(Math.random()*40-40)+"px";
-      eventVisual.appendChild(p);
-    }
-  }
-}
-
-function renderMiniEventVisual(mev){
-  clearEventVisuals();
-  if(mev.id==="mild_breeze"){
-    const count=20;
-    const rect=eventVisual.getBoundingClientRect();
-    const width=rect.width||800;
-    for(let i=0;i<count;i++){
-      const leaf=document.createElement("div");
-      leaf.className="breeze-leaf";
-      const x=Math.random()*width;
-      leaf.style.left=x+"px";
-      leaf.style.top=(Math.random()*40)+"px";
-      eventVisual.appendChild(leaf);
-    }
-  }else if(mev.id==="fertile_soil"){
-    const glow=document.createElement("div");
-    glow.className="soil-glow";
-    eventVisual.appendChild(glow);
-  }else if(mev.id==="calm_night"){
-    const count=18;
-    const rect=eventVisual.getBoundingClientRect();
-    const width=rect.width||800;
-    const height=rect.height||260;
-    for(let i=0;i<count;i++){
-      const g=document.createElement("div");
-      g.className="calm-glow";
-      const x=Math.random()*width;
-      const y=Math.random()*height*0.5;
-      g.style.left=x+"px";
-      g.style.top=y+"px";
-      eventVisual.appendChild(g);
-    }
-  }
-}
-
-/* =========================================================
-PLOTS
-========================================================= */
-function renderPlots(){
-  plotsEl.innerHTML="";
-  for(let i=0;i<MAX_PLOTS;i++){
-    const plot=document.createElement("div");
-    const unlocked=i<state.plots;
-    plot.className="plot "+(unlocked?"unlocked":"locked");
-    if(!unlocked){
-      const cost=500*(i+1);
-      plot.innerHTML=`
-        <div class="lock">🔒</div>
-        <div class="plot-name">Ny plot</div>
-        <div class="plot-price">Kjøp for ${fmt(cost)} pengar</div>
-      `;
-      plot.onclick=()=>buyPlot(i,cost);
-    }else{
-      const plant=state.plants[i];
-      if(!plant){
-        plot.innerHTML=`
-          <div class="plant-icon">🌱</div>
-          <div class="plant-name">Tom plot</div>
-          <div class="mutation">Klikk for å plante</div>
-        `;
-        plot.onclick=()=>openShopForPlot(i);
-      }else{
-        const seed=getSeed(plant.id);
-        const totalTime=getGrowthTime(seed);
-        const elapsed=(Date.now()-plant.plantedAt)/1000;
-        const pct=clamp(elapsed/totalTime,0,1);
-        const ready=pct>=1;
-        const progressWidth=Math.floor(pct*100);
-        if(ready) plot.classList.add("ready-glow");
-        const mutClass=plant.mutated?"mutation-glow":"";
-        plot.innerHTML=`
-          <div class="plant-icon">${seed.icon}</div>
-          <div class="plant-name">${seed.name}${plant.mutated?" ✨":""}</div>
-          <div class="progress">
-            <div class="progress-fill" style="width:${progressWidth}%"></div>
-          </div>
-          <div class="mutation ${mutClass}">
-            ${ready?"Klar til innhøsting":"Vekst: "+Math.floor(totalTime-elapsed)+"s igjen"}
-          </div>
-        `;
-        plot.onclick=()=>{
-          if(ready) harvestPlant(i);
         };
+
       }
+
     }
-    plotsEl.appendChild(plot);
-  }
-}
 
-function buyPlot(index,cost){
-  if(state.money<cost) return showToast("Du har ikkje nok pengar til å kjøpe denne plotten.");
-  state.money-=cost;
-  state.plots=Math.max(state.plots,index+1);
-  save();
-  renderAll();
-}
+  }
 
-function openShopForPlot(index){
-  openShop(index);
-}
-
-/* =========================================================
-GROWTH / HARVEST
-========================================================= */
-function getGrowthTime(seed){
-  let t=seed.time;
-  const lvl=state.upgrades.shorterGrowth||0;
-  if(lvl>0){
-    t*=Math.pow(0.9,lvl);
-  }
-  return t;
-}
-
-function getGrowthMultiplier(){
-  let mult=1;
-  const lvl=state.upgrades.fasterGrowth||0;
-  if(lvl>0){
-    mult*=1+0.1*lvl;
-  }
-  for(const id of state.activePets){
-    const pet=getPet(id);
-    if(!pet) continue;
-    if(pet.growth) mult+=pet.growth;
-    if(pet.all) mult+=pet.all;
-  }
-  if(state.activeEvent){
-    const ev=EVENTS[state.activeEvent];
-    if(ev && ev.growth) mult*=ev.growth;
-    if(ev && ev.nightGrowth && state.dayTime>=0.5) mult*=ev.nightGrowth;
-  }
-  if(state.activeMiniEvent){
-    const mev=MINI_EVENTS[state.activeMiniEvent];
-    if(mev && mev.growth) mult*=mev.growth;
-    if(mev && mev.nightGrowth && state.dayTime>=0.5) mult*=mev.nightGrowth;
-  }
-  return mult;
-}
-
-function getValueMultiplier(){
-  let mult=1;
-  const lvl=state.upgrades.moneyMultiplier||0;
-  if(lvl>0){
-    mult*=1+0.1*lvl;
-  }
-  for(const id of state.activePets){
-    const pet=getPet(id);
-    if(!pet) continue;
-    if(pet.money) mult+=pet.money;
-    if(pet.all) mult+=pet.all;
-  }
-  if(state.activeEvent){
-    const ev=EVENTS[state.activeEvent];
-    if(ev && ev.money) mult*=ev.money;
-  }
-  if(state.activeMiniEvent){
-    const mev=MINI_EVENTS[state.activeMiniEvent];
-    if(mev && mev.value) mult*=mev.value;
-  }
-  return mult;
-}
-
-function harvestPlant(index){
-  const plant=state.plants[index];
-  if(!plant) return;
-  const seed=getSeed(plant.id);
-  const base=seed.value;
-  const w=WEATHER[state.weather];
-  let value=base*w.value;
-  if(plant.mutated){
-    value*=1.5;
-  }
-  value*=getValueMultiplier();
-  state.money+=value;
-  state.plants[index]=null;
-  showToast(`Du hausta ${seed.name} og fekk ${fmt(value)} pengar.`);
-  save();
-  renderAll();
-}
-
-/* =========================================================
-SHOP
-========================================================= */
-const modal=document.getElementById("modal");
-const modalTitle=document.getElementById("modalTitle");
-const modalContent=document.getElementById("modalContent");
-
-function openModal(title,contentHTML){
-  modalTitle.textContent=title;
-  modalContent.innerHTML=contentHTML;
-  modal.classList.remove("hidden");
-}
-
-function closeModal(){
-  modal.classList.add("hidden");
-}
-
-function openShop(plotIndex=null){
-  let html=`<div class="shop-money">💰 Pengar: <span>${fmt(state.money)}</span></div>`;
-  html+=`<div class="shop-grid">`;
-  for(const seed of SEEDS){
-    const ownedCount=state.inventory[seed.id]||0;
-    const canAfford=state.money>=seed.price;
-    html+=`
-      <div class="card">
-        <div class="seed-icon">${seed.icon}</div>
-        <h3>${seed.name}</h3>
-        <p><span class="rarity ${rarityClass(seed.rarity)}">${seed.rarity}</span></p>
-        <p>Pris: ${fmt(seed.price)} pengar</p>
-        <p>Veksttid: ${seed.time}s</p>
-        <p>Verdi: ${fmt(seed.value)} pengar</p>
-        <p>På lager: ${ownedCount}</p>
-        <button ${canAfford?"":"disabled"} onclick="buySeed('${seed.id}',${plotIndex==null?"null":plotIndex})">
-          Kjøp frø
-        </button>
-      </div>
-    `;
-  }
-  html+=`</div>`;
-  openModal("Zen Shop",html);
-}
-
-function buySeed(id,plotIndex){
-  const seed=getSeed(id);
-  if(!seed) return;
-  if(state.money<seed.price){
-    return showToast("Du har ikkje nok pengar til dette frøet.");
-  }
-  state.money-=seed.price;
-  state.inventory[id]=(state.inventory[id]||0)+1;
-  save();
-  renderAll();
-  if(plotIndex!=null){
-    plantSeedOnPlot(id,plotIndex);
-    closeModal();
-  }else{
-    openShop();
-  }
-}
-
-function plantSeedOnPlot(id,index){
-  if(!getSeed(id)) return;
-  if(index>=state.plots) return;
-  if(state.plants[index]) return;
-  if((state.inventory[id]||0)<=0){
-    return showToast("Du har ikkje dette frøet på lager.");
-  }
-  state.inventory[id]--;
-  state.plants[index]={
-    id,
-    plantedAt:Date.now(),
-    mutated:rollMutation()
+  s.inventory={
+    ...fresh.inventory,
+    ...(raw.inventory||{})
   };
-  save();
-  renderAll();
-}
 
-function rollMutation(){
-  let chance=0.02;
-  const lvl=state.upgrades.mutationChance||0;
-  if(lvl>0) chance+=0.03*lvl;
-  for(const id of state.activePets){
-    const pet=getPet(id);
-    if(!pet) continue;
-    if(pet.mutation) chance+=pet.mutation;
-    if(pet.all) chance+=pet.all;
+  s.ownedPets=
+    Array.isArray(raw.ownedPets)
+    ?raw.ownedPets.filter(
+      p=>PETS.some(x=>x.id===p)
+    )
+    :[];
+
+  if(Array.isArray(raw.activePets)){
+
+    s.activePets=
+      raw.activePets.filter(
+        p=>s.ownedPets.includes(p)
+      );
+
+  }else if(raw.activePet){
+
+    s.activePets=
+      s.ownedPets.includes(raw.activePet)
+      ?[raw.activePet]
+      :[];
+
   }
-  if(state.activeEvent){
-    const ev=EVENTS[state.activeEvent];
-    if(ev && ev.mutation) chance+=ev.mutation;
+
+  s.defeatedBosses=
+    Array.isArray(raw.defeatedBosses)
+    ?raw.defeatedBosses.filter(
+      id=>BOSSES.some(b=>b.id===id)
+    )
+    :[];
+
+  const oldUpgrades=
+    raw.upgrades
+    ||raw.zenUpgrades
+    ||{};
+
+  s.upgrades={
+    ...fresh.upgrades,
+    ...oldUpgrades
+  };
+
+  for(const key of Object.keys(s.upgrades)){
+
+    s.upgrades[key]=clamp(
+      Number(s.upgrades[key])||0,
+      0,
+      5
+    );
+
   }
-  if(state.activeMiniEvent){
-    const mev=MINI_EVENTS[state.activeMiniEvent];
-    if(mev && mev.mutation) chance+=mev.mutation;
+
+  if(WEATHER[raw.weather]){
+    s.weather=raw.weather;
   }
-  return Math.random()<chance;
-}
 
-/* =========================================================
-PETS
-========================================================= */
-function openPets(){
-  let html=`<div class="shop-money">💰 Pengar: <span>${fmt(state.money)}</span></div>`;
-  const slots=getPetSlots();
-  html+=`<p>Tilgjengelege slots: ${slots}</p>`;
+  s.weatherEnds=
+    Number(raw.weatherEnds)
+    ||Date.now()+60000;
 
-  const spiritPets=state.ownedPets.filter(id=>BOSS_PETS.find(p=>p.id===id));
-  const normalPets=state.ownedPets.filter(id=>PETS.find(p=>p.id===id));
+  s.dayTime=
+    Number(raw.dayTime);
 
-  html+=`<h3>Vanlege kjeledyr</h3>`;
-  html+=`<div class="pet-grid">`;
-  for(const pet of PETS){
-    const owned=normalPets.includes(pet.id);
-    const active=state.activePets.includes(pet.id);
-    const canAfford=!owned && state.money>=pet.price;
-    html+=`
-      <div class="card">
-        <div class="seed-icon">${pet.icon}</div>
-        <h3>${pet.name}</h3>
-        <p><span class="rarity ${rarityClass(pet.rarity)}">${pet.rarity}</span></p>
-        <p>${pet.bonus}</p>
-        <p>Pris: ${fmt(pet.price)} pengar</p>
-        <p>Status: ${owned?(active?"Utstyrt":"Eig"): "Ikkje eigd"}</p>
-        ${owned?`
-          <button onclick="togglePetActive('${pet.id}')">
-            ${active?"Fjern frå aktiv":"Gjer aktiv"}
-          </button>
-        `:`
-          <button ${canAfford?"":"disabled"} onclick="buyPet('${pet.id}')">
-            Kjøp kjeledyr
-          </button>
-        `}
-      </div>
-    `;
+  if(!Number.isFinite(s.dayTime)){
+    s.dayTime=.25;
   }
-  html+=`</div>`;
 
-  html+=`<h3>Spirit-kjeledyr</h3>`;
-  html+=`<div class="pet-grid">`;
-  for(const pet of BOSS_PETS){
-    const owned=spiritPets.includes(pet.id);
-    const active=state.activePets.includes(pet.id);
-    html+=`
-      <div class="card">
-        <div class="seed-icon">${pet.icon}</div>
-        <h3>${pet.name}</h3>
-        <p><span class="rarity ${rarityClass(pet.rarity)}">${pet.rarity}</span></p>
-        <p>${pet.bonus}</p>
-        <p>Status: ${owned?(active?"Aktiv":"Eig"): "Ikkje eigd"}</p>
-        ${owned?`
-          <button onclick="togglePetActive('${pet.id}')">
-            ${active?"Fjern frå aktiv":"Gjer aktiv"}
-          </button>
-        `:`
-          <button disabled>Få frå boss</button>
-        `}
-      </div>
-    `;
-  }
-  html+=`</div>`;
+  s.currentBossHP=
+    raw.currentBossHP==null
+    ?null
+    :Number(raw.currentBossHP);
 
-  openModal("Zen-kjeledyr",html);
-}
+  s.needsRebirth=
+    !!raw.needsRebirth;
 
-function buyPet(id){
-  const pet=getPet(id);
-  if(!pet) return;
-  if(state.money<pet.price) return showToast("Du har ikkje nok pengar til dette kjeledyret.");
-  if(state.ownedPets.includes(id)) return;
-  state.money-=pet.price;
-  state.ownedPets.push(id);
-  save();
-  openPets();
-  renderAll();
-}
+  if(
+    raw.activeEvent
+    &&EVENTS[raw.activeEvent.id]
+  ){
 
-function togglePetActive(id){
-  const idx=state.activePets.indexOf(id);
-  if(idx>=0){
-    state.activePets.splice(idx,1);
+    s.activeEvent=raw.activeEvent;
+
   }else{
-    const slots=getPetSlots();
-    if(state.activePets.length>=slots){
-      return showToast("Du har ikkje fleire kjeledyr-slots.");
+
+    s.activeEvent=null;
+
+  }
+
+  s.eventEnds=
+    Number(raw.eventEnds)||0;
+
+  s.lastEventMinute=
+    Number(raw.lastEventMinute)
+    ||Math.floor(Date.now()/60000);
+
+  s.lastTick=
+    Number(raw.lastTick)
+    ||Date.now();
+
+  const boss=getCurrentBossFromState(s);
+
+  if(
+    !s.currentBossHP
+    &&boss
+    &&!s.needsRebirth
+  ){
+
+    s.currentBossHP=boss.hp;
+
+  }
+
+  return s;
+}
+
+
+function getCurrentBossFromState(s){
+
+  if(s.needsRebirth){
+    return null;
+  }
+
+  return BOSSES.find(
+    b=>!s.defeatedBosses.includes(b.id)
+  )||null;
+}
+
+
+/* =========================================================
+   LOAD
+========================================================= */
+
+function load(){
+
+  const raw=localStorage.getItem(SAVE_KEY);
+
+  if(raw){
+
+    try{
+
+      state=migrate(
+        JSON.parse(raw)
+      );
+
+    }catch(error){
+
+      console.error(error);
+
+      state=createFreshState();
+
     }
-    state.activePets.push(id);
-  }
-  save();
-  openPets();
-  renderAll();
-}
 
-/* =========================================================
-UPGRADES
-========================================================= */
-function openUpgrades(){
-  let html=`<div class="shop-money">💰 Pengar: <span>${fmt(state.money)}</span></div>`;
-  html+=`<div class="upgrade-grid">`;
-  for(const [key,info] of Object.entries(UPGRADE_INFO)){
-    const lvl=state.upgrades[key]||0;
-    const maxLvl=info.cost.length;
-    const nextCost=lvl<maxLvl?info.cost[lvl]:null;
-    html+=`
-      <div class="card">
-        <div class="seed-icon">${info.icon}</div>
-        <h3>${info.name}</h3>
-        <p>${info.desc}</p>
-        <p>Nivå: ${lvl}/${maxLvl}</p>
-        ${nextCost!=null?`
-          <p>Pris: ${fmt(nextCost)} pengar</p>
-          <button ${state.money>=nextCost?"":"disabled"} onclick="buyUpgrade('${key}')">
-            Kjøp nivå ${lvl+1}
-          </button>
-        `:`
-          <button disabled>Maks nivå</button>
-        `}
-      </div>
-    `;
-  }
-  html+=`</div>`;
-  openModal("Zen Upgrades",html);
-}
+  }else{
 
-function buyUpgrade(key){
-  const info=UPGRADE_INFO[key];
-  if(!info) return;
-  const lvl=state.upgrades[key]||0;
-  if(lvl>=info.cost.length) return;
-  const cost=info.cost[lvl];
-  if(state.money<cost) return showToast("Du har ikkje nok pengar til denne oppgraderinga.");
-  state.money-=cost;
-  state.upgrades[key]=lvl+1;
-  save();
-  openUpgrades();
-  renderAll();
-}
-
-/* =========================================================
-BOSS
-========================================================= */
-function openBoss(){
-  const boss=getCurrentBoss();
-  if(!boss){
-    openModal("Boss",`
-      <p>Du har slått alle bossar! 👑</p>
-    `);
-    return;
-  }
-  const hp=state.currentBossHP==null?boss.hp:state.currentBossHP;
-  const dmgPerClick=Math.max(1,Math.floor(state.money*getBossDamageMultiplier()));
-  const spiritPet=getPet(boss.pet);
-  const html=`
-    <div class="boss-grid">
-      <div class="card">
-        <div class="seed-icon">${boss.icon}</div>
-        <h3>${boss.name}</h3>
-        <p>HP: ${fmt(hp)} / ${fmt(boss.hp)}</p>
-        <p>Belønning: ${fmt(boss.reward)} pengar</p>
-        <p>Spirit-kjeledyr: ${spiritPet.icon} ${spiritPet.name}</p>
-        <button class="action" onclick="attackBoss()">
-          Angrip boss (skade: ${fmt(dmgPerClick)})
-        </button>
-      </div>
-    </div>
-  `;
-  openModal("Boss",html);
-}
-
-function getBossDamageMultiplier(){
-  let mult=1;
-  for(const id of state.activePets){
-    const pet=getPet(id);
-    if(!pet) continue;
-    if(pet.boss) mult+=pet.boss;
-    if(pet.all) mult+=pet.all;
-  }
-  if(state.activeEvent){
-    const ev=EVENTS[state.activeEvent];
-    if(ev && ev.boss) mult*=ev.boss;
-  }
-  return mult;
-}
-
-function attackBoss(){
-  const boss=getCurrentBoss();
-  if(!boss) return;
-  if(state.money<=0) return showToast("Du treng pengar for å gjere skade på bossen.");
-  if(state.currentBossHP==null) state.currentBossHP=boss.hp;
-  const dmg=Math.max(1,Math.floor(state.money*getBossDamageMultiplier()));
-  const oldHP=state.currentBossHP;
-  state.currentBossHP=clamp(state.currentBossHP-dmg,0,boss.hp);
-  if(state.currentBossHP<=0){
-    state.defeatedBosses.push(boss.id);
-    state.defeatedBosses=[...new Set(state.defeatedBosses)];
-    state.currentBossHP=null;
-    state.money+=boss.reward;
-    if(!state.ownedPets.includes(boss.pet)){
-      state.ownedPets.push(boss.pet);
-    }
-    showToast(`Du slo ${boss.name}! Du fekk ${fmt(boss.reward)} pengar og spirit-kjeledyr.`);
-  }
-  save();
-  openBoss();
-  renderAll();
-}
-
-/* =========================================================
-REBIRTH
-========================================================= */
-function openRebirth(){
-  const html=`
-    <div class="rebirth-box">
-      <h3>Rebirth</h3>
-      <p>Start på nytt med sterkare Zen-hage. Du mister plantar og pengar, men behaldar rebirth-teljing, bossar og spirit-kjeledyr.</p>
-      <p>Etter rebirth startar du med 1 gulrot planta.</p>
-      <button class="rebirth-btn" onclick="doRebirth()">
-        🔄 Utfør Rebirth
-      </button>
-    </div>
-  `;
-  openModal("Rebirth",html);
-}
-
-function doRebirth(){
-  clearWeatherVisuals();
-  clearEventVisuals();
-  rebirthOverlay.classList.add("show");
-  setTimeout(()=>{
-    const oldRebirths=state.rebirths;
-    const oldDefeated=[...state.defeatedBosses];
-    const oldOwnedPets=[...state.ownedPets];
     state=createFreshState();
-    state.rebirths=oldRebirths+1;
-    state.defeatedBosses=oldDefeated;
-    state.ownedPets=[...new Set(oldOwnedPets)];
-    state.plots=1;
-    state.plants[0]={
-      id:"carrot",
-      plantedAt:Date.now(),
-      mutated:false
-    };
-    save();
-    closeModal();
-    renderAll();
-    showToast("Rebirth utført! Du startar med ein gulrot-plot.");
-    setTimeout(()=>{
-      rebirthOverlay.classList.remove("show");
-    },800);
-  },400);
-}
 
-/* =========================================================
-EVENT / MINI-EVENT / VÊR-TICK
-========================================================= */
-function updateWeatherAndEvents(deltaMs){
-  const now=Date.now();
-  if(state.weatherEnds<=now){
-    rollNewWeather();
+    state.username=
+      localStorage.getItem(NICKNAME_KEY)||"";
+
   }
 
-  if(state.activeEvent && state.eventEnds<=now){
-    state.activeEvent=null;
-    state.eventEnds=0;
-    clearEventVisuals();
-  }else{
-    maybeStartEvent();
-  }
-
-  if(state.activeMiniEvent && state.miniEventEnds<=now){
-    state.activeMiniEvent=null;
-    state.miniEventEnds=0;
-    clearEventVisuals();
-  }else{
-    maybeStartMiniEvent();
-  }
-}
-
-function rollNewWeather(){
-  const weights=[
-    {item:"Clear",weight:50},
-    {item:"Rain",weight:20},
-    {item:"Storm",weight:10},
-    {item:"Frost",weight:8},
-    {item:"Fog",weight:8},
-    {item:"Rainbow",weight:4}
-  ];
-  const w=weightedChoice(weights);
-  state.weather=w;
-  const base=60000;
-  state.weatherEnds=Date.now()+base;
-}
-
-function maybeStartEvent(){
-  const nowMin=Math.floor(Date.now()/60000);
-  if(nowMin===state.lastEventMinute) return;
-  state.lastEventMinute=nowMin;
-  if(state.activeEvent) return;
-  const roll=Math.random();
-  const candidates=Object.values(EVENTS).filter(ev=>roll<ev.chance);
-  if(candidates.length===0) return;
-  const ev=candidates[randomInt(0,candidates.length-1)];
-  state.activeEvent=ev.id;
-  const dur=randomInt(ev.min,ev.max)*1000;
-  state.eventEnds=Date.now()+dur;
-  renderEvent();
-}
-
-function maybeStartMiniEvent(){
-  const nowMin=Math.floor(Date.now()/60000);
-  if(nowMin===state.lastMiniEventMinute) return;
-  state.lastMiniEventMinute=nowMin;
-  if(state.activeMiniEvent || state.activeEvent) return;
-  const roll=Math.random();
-  const candidates=Object.values(MINI_EVENTS).filter(ev=>roll<ev.chance);
-  if(candidates.length===0) return;
-  const ev=candidates[randomInt(0,candidates.length-1)];
-  state.activeMiniEvent=ev.id;
-  const dur=randomInt(ev.min,ev.max)*1000;
-  state.miniEventEnds=Date.now()+dur;
-  renderEvent();
-}
-
-/* =========================================================
-TICK
-========================================================= */
-function tick(){
-  const now=Date.now();
-  const delta=now-state.lastTick;
-  state.lastTick=now;
-
-  state.dayTime=(state.dayTime+delta/600000)%1;
-
-  updateWeatherAndEvents(delta);
-  renderAll();
-  save();
-}
-
-/* =========================================================
-TOAST
-========================================================= */
-const toast=document.getElementById("toast");
-let toastTimer=null;
-function showToast(msg){
-  toast.textContent=msg;
-  toast.classList.add("show");
-  if(toastTimer) clearTimeout(toastTimer);
-  toastTimer=setTimeout(()=>{
-    toast.classList.remove("show");
-  },2500);
-}
-
-/* =========================================================
-START / MENY
-========================================================= */
-const startScreen=document.getElementById("startScreen");
-const gameEl=document.getElementById("game");
-const nicknameInput=document.getElementById("nicknameInput");
-const newGameArea=document.getElementById("newGameArea");
-const existingArea=document.getElementById("existingArea");
-const savedNameEl=document.getElementById("savedName");
-const brandName=document.getElementById("brandName");
-
-function init(){
-  load();
   applyOfflineProgress();
-  const savedNick=localStorage.getItem(NICKNAME_KEY);
-  if(savedNick){
-    savedNameEl.textContent=savedNick;
-    brandName.textContent=savedNick;
-    newGameArea.classList.add("hidden");
-    existingArea.classList.remove("hidden");
+
+  if(!state.username){
+
+    showStart();
+
   }else{
-    newGameArea.classList.remove("hidden");
-    existingArea.classList.add("hidden");
+
+    updateStartScreen();
+
   }
-  renderAll();
+
 }
 
-function startGame(){
-  let nick=localStorage.getItem(NICKNAME_KEY);
-  if(!nick){
-    nick=nicknameInput.value.trim();
-    if(!nick){
-      return showToast("Skriv inn eit kallenamn først.");
-    }
-    state.username=nick;
-    brandName.textContent=nick;
-    save();
-  }else{
-    state.username=nick;
-    brandName.textContent=nick;
-  }
-  startScreen.classList.add("hidden");
-  gameEl.classList.remove("hidden");
-  if(!gameRunning){
-    gameRunning=true;
-    tickTimer=setInterval(tick,1000);
-  }
-}
+
+/* =========================================================
+   NULLSTILL
+========================================================= */
 
 function resetProgress(){
+
+  if(!confirm(
+    "Er du sikker på at du vil nullstille fremgangen? Kallenavnet beholdes."
+  )){
+    return;
+  }
+
+  const name=
+    localStorage.getItem(NICKNAME_KEY)
+    ||state.username
+    ||"";
+
   localStorage.removeItem(SAVE_KEY);
-  localStorage.removeItem(NICKNAME_KEY);
+
   state=createFreshState();
-  nicknameInput.value="";
-  newGameArea.classList.remove("hidden");
-  existingArea.classList.add("hidden");
-  brandName.textContent="OLO";
-  renderAll();
-  showToast("Framgang nullstilt.");
+
+  state.username=name;
+
+  save();
+
+  closeModal();
+
+  showToast(
+    "🔄 Fremgangen er nullstilt. Kallenavnet er beholdt."
+  );
+
+  updateStartScreen();
 }
+
 
 function changeName(){
-  const newNick=prompt("Skriv nytt kallenamn:",state.username||"");
-  if(!newNick) return;
-  state.username=newNick.trim();
-  brandName.textContent=state.username;
-  localStorage.setItem(NICKNAME_KEY,state.username);
-  save();
-  savedNameEl.textContent=state.username;
-  showToast("Kallenamn oppdatert.");
+
+  const name=prompt(
+    "Nytt kallenavn:",
+    state.username||""
+  );
+
+  if(name&&name.trim()){
+
+    state.username=
+      name.trim().slice(0,20);
+
+    save();
+
+    updateStartScreen();
+
+    if(gameRunning){
+      render();
+    }
+
+  }
+
 }
 
-function showHomeMenu(){
-  startScreen.classList.remove("hidden");
-  gameEl.classList.add("hidden");
-}
 
 /* =========================================================
-INIT
+   START
 ========================================================= */
-init();
+
+function showStart(){
+
+  document
+    .getElementById("startScreen")
+    .classList.remove("hidden");
+
+  document
+    .getElementById("game")
+    .classList.add("hidden");
+
+  updateStartScreen();
+}
+
+
+function updateStartScreen(){
+
+  const name=
+    localStorage.getItem(NICKNAME_KEY)
+    ||state.username;
+
+  if(
+    name
+    &&localStorage.getItem(SAVE_KEY)
+  ){
+
+    document
+      .getElementById("newGameArea")
+      .classList.add("hidden");
+
+    document
+      .getElementById("existingArea")
+      .classList.remove("hidden");
+
+    document
+      .getElementById("savedName")
+      .textContent=name;
+
+  }else{
+
+    document
+      .getElementById("newGameArea")
+      .classList.remove("hidden");
+
+    document
+      .getElementById("existingArea")
+      .classList.add("hidden");
+
+    document
+      .getElementById("nicknameInput")
+      .value=name||"";
+
+  }
+
+}
+
+
+function startGame(){
+
+  let name=
+    document
+      .getElementById("nicknameInput")
+      .value
+      .trim();
+
+  if(!name){
+
+    name=
+      localStorage.getItem(NICKNAME_KEY)
+      ||"OLO";
+
+  }
+
+  state.username=
+    name.slice(0,20);
+
+  save();
+
+  document
+    .getElementById("startScreen")
+    .classList.add("hidden");
+
+  document
+    .getElementById("game")
+    .classList.remove("hidden");
+
+  gameRunning=true;
+
+  render();
+
+  setupWeatherVisuals();
+
+  if(!tickTimer){
+
+    tickTimer=setInterval(
+      gameTick,
+      1000
+    );
+
+  }
+
+}
+
+
+function showHomeMenu(){
+
+  closeModal();
+
+  document
+    .getElementById("game")
+    .classList.add("hidden");
+
+  document
+    .getElementById("startScreen")
+    .classList.remove("hidden");
+
+  gameRunning=false;
+
+  updateStartScreen();
+
+}
+
+
+/* =========================================================
+   TOMTER
+========================================================= */
+
+function plotPrice(index){
+
+  return Math.floor(
+    500*Math.pow(1.45,index)
+  );
+
+}
+
+
+function buyPlot(index){
+
+  if(index!==state.plots){
+    return;
+  }
+
+  if(state.plots>=MAX_PLOTS){
+
+    showToast(
+      "🌱 Du har alle 30 tomtene!"
+    );
+
+    return;
+  }
+
+  const price=plotPrice(index);
+
+  if(state.money<price){
+
+    showToast(
+      `💰 Du trenger ${fmt(price)} penger.`
+    );
+
+    return;
+  }
+
+  state.money-=price;
+
+  state.plots++;
+
+  save();
+
+  render();
+
+  showToast(
+    `🌱 Tomt ${index+1} er kjøpt!`
+  );
+
+}
+
+
+/* =========================================================
+   PLANTE
+========================================================= */
+
+function plantPlot(index){
+
+  if(index>=state.plots){
+    return;
+  }
+
+  const plot=state.plants[index];
+
+  if(plot){
+
+    if(isPlantReady(plot)){
+
+      harvest(index);
+
+    }else{
+
+      showToast(
+        "🌱 Denne planten vokser fortsatt."
+      );
+
+    }
+
+    return;
+  }
+
+  openPlantChooser(index);
+
+}
+
+
+function openPlantChooser(index){
+
+  const available=
+    SEEDS.filter(
+      seed=>(state.inventory[seed.id]||0)>0
+    );
+
+  if(!available.length){
+
+    showToast(
+      "🌱 Du har ingen frø. Åpne Zen Shop!"
+    );
+
+    openShop();
+
+    return;
+  }
+
+  document
+    .getElementById("modalTitle")
+    .textContent=
+      `🌱 Velg frø til Tomt ${index+1}`;
+
+  document
+    .getElementById("modalContent")
+    .innerHTML=`
+
+      <div class="shop-grid">
+
+        ${available.map(seed=>`
+
+          <div class="card">
+
+            <div class="seed-icon">
+              ${seed.icon}
+            </div>
+
+            <h3>
+              ${seed.name}
+            </h3>
+
+            <p class="${rarityClass(seed.rarity)}">
+              Rarities: ${seed.rarity}
+            </p>
+
+            <p>
+              Du har:
+              ${state.inventory[seed.id]||0}
+            </p>
+
+            <p>
+              Vekst:
+              ${seed.time} sekunder
+            </p>
+
+            <button
+              onclick="plantSeed(${index},'${seed.id}')"
+            >
+              🌱 Plant
+            </button>
+
+          </div>
+
+        `).join("")}
+
+      </div>
+
+  `;
+
+  document
+    .getElementById("modal")
+    .classList.remove("hidden");
+
+}
+
+
+function plantSeed(index,id){
+
+  const seed=getSeed(id);
+
+  if(!seed)return;
+
+  if(index>=state.plots)return;
+
+  if(state.plants[index])return;
+
+  if((state.inventory[id]||0)<=0){
+
+    showToast(
+      "Du har ikke dette frøet."
+    );
+
+    return;
+  }
+
+  state.inventory[id]--;
+
+  state.plants[index]={
+
+    plantId:id,
+
+    progress:0,
+
+    mutation:null
+
+  };
+
+  save();
+
+  closeModal();
+
+  render();
+
+  showToast(
+    `${seed.icon} ${seed.name} er plantet!`
+  );
+
+}
+
+
+function isPlantReady(plot){
+
+  const seed=getSeed(plot.plantId);
+
+  return !!seed
+    &&plot.progress>=seed.time;
+
+}
+
+
+/* =========================================================
+   MUTASJON
+========================================================= */
+
+function getMutationChance(){
+
+  let chance=.075;
+
+  chance*=
+    1+0.12*state.upgrades.mutationChance;
+
+  for(const id of state.activePets){
+
+    const pet=getPet(id);
+
+    if(!pet)continue;
+
+    chance+=pet.mutation||0;
+
+    if(pet.all){
+      chance+=pet.all*.5;
+    }
+
+  }
+
+  for(const bossId of state.defeatedBosses){
+
+    const boss=
+      BOSSES.find(
+        b=>b.id===bossId
+      );
+
+    const pet=
+      boss
+      ?getPet(boss.pet)
+      :null;
+
+    if(!pet)continue;
+
+    chance+=pet.mutation||0;
+
+    if(pet.all){
+      chance+=pet.all*.5;
+    }
+
+  }
+
+  if(state.activeEvent){
+
+    const event=
+      EVENTS[state.activeEvent.id];
+
+    if(event){
+      chance+=event.mutation||0;
+    }
+
+  }
+
+  return Math.min(
+    .5,
+    chance
+  );
+
+}
+
+
+function rollMutation(){
+
+  if(
+    Math.random()>getMutationChance()
+  ){
+    return null;
+  }
+
+  const roll=Math.random();
+
+  if(roll<.067){
+
+    return {
+      name:"Celestial",
+      icon:"✨",
+      multiplier:8,
+      class:"exotic"
+    };
+
+  }
+
+  if(roll<.333){
+
+    return {
+      name:"Regnbue",
+      icon:"🌈",
+      multiplier:4,
+      class:"rainbow"
+    };
+
+  }
+
+  return {
+    name:"Golden",
+    icon:"🌟",
+    multiplier:2,
+    class:"legendary"
+  };
+
+}
+
+
+/* =========================================================
+   HØSTING
+========================================================= */
+
+function harvest(index){
+
+  const plot=state.plants[index];
+
+  if(!plot)return;
+
+  const seed=getSeed(plot.plantId);
+
+  if(!seed)return;
+
+  if(!isPlantReady(plot)){
+
+    showToast(
+      "⏳ Planten er ikke klar ennå!"
+    );
+
+    return;
+  }
+
+  if(!plot.mutation){
+
+    plot.mutation=
+      rollMutation();
+
+  }
+
+  let amount=seed.value;
+
+  if(plot.mutation){
+
+    amount*=
+      plot.mutation.multiplier;
+
+  }
+
+  amount*=
+    getValueMultiplier();
+
+  amount=Math.floor(amount);
+
+  state.plants[index]=null;
+
+  earnMoney(
+    amount,
+    true
+  );
+
+  save();
+
+  render();
+
+  let message=
+    `${seed.icon} ${seed.name}: +${fmt(amount)} penger`;
+
+  if(plot.mutation){
+
+    message+=
+      ` ${plot.mutation.icon} ${plot.mutation.name}!`;
+
+  }
+
+  showToast(message);
+
+}
+
+
+/* =========================================================
+   PENGER
+========================================================= */
+
+function getValueMultiplier(){
+
+  let multiplier=
+    WEATHER[state.weather]?.value||1;
+
+  multiplier*=
+    1+0.10*state.upgrades.moneyMultiplier;
+
+  for(const id of state.activePets){
+
+    const pet=getPet(id);
+
+    if(!pet)continue;
+
+    multiplier+=pet.money||0;
+
+    if(pet.all){
+      multiplier+=pet.all;
+    }
+
+  }
+
+  for(const bossId of state.defeatedBosses){
+
+    const boss=
+      BOSSES.find(
+        b=>b.id===bossId
+      );
+
+    const pet=
+      boss
+      ?getPet(boss.pet)
+      :null;
+
+    if(!pet)continue;
+
+    multiplier+=pet.money||0;
+
+    if(pet.all){
+      multiplier+=pet.all;
+    }
+
+  }
+
+  if(state.activeEvent){
+
+    const event=
+      EVENTS[state.activeEvent.id];
+
+    if(event){
+
+      multiplier*=
+        event.money||1;
+
+    }
+
+  }
+
+  return multiplier;
+
+}
+
+
+function earnMoney(amount,damageBoss=true){
+
+  amount=
+    Math.max(
+      0,
+      Math.floor(amount)
+    );
+
+  state.money+=amount;
+
+  if(
+    damageBoss
+    &&amount>0
+  ){
+
+    damageBossFromMoney(amount);
+
+  }
+
+  return amount;
+
+}
+
+
+/* =========================================================
+   BOSS
+========================================================= */
+
+function getCurrentBoss(){
+
+  if(state.needsRebirth){
+    return null;
+  }
+
+  return BOSSES.find(
+    b=>!state.defeatedBosses.includes(b.id)
+  )||null;
+
+}
+
+
+function getBossDamageMultiplier(){
+
+  let multiplier=1;
+
+  for(const id of state.activePets){
+
+    const pet=getPet(id);
+
+    if(!pet)continue;
+
+    multiplier+=pet.boss||0;
+
+    if(pet.all){
+      multiplier+=pet.all;
+    }
+
+  }
+
+  for(const bossId of state.defeatedBosses){
+
+    const boss=
+      BOSSES.find(
+        b=>b.id===bossId
+      );
+
+    const pet=
+      boss
+      ?getPet(boss.pet)
+      :null;
+
+    if(!pet)continue;
+
+    multiplier+=pet.boss||0;
+
+    if(pet.all){
+      multiplier+=pet.all;
+    }
+
+  }
+
+  if(state.activeEvent){
+
+    const event=
+      EVENTS[state.activeEvent.id];
+
+    if(event){
+
+      multiplier*=
+        event.boss||1;
+
+    }
+
+  }
+
+  return multiplier;
+
+}
+
+
+function damageBossFromMoney(amount){
+
+  const boss=getCurrentBoss();
+
+  if(
+    !boss
+    ||state.needsRebirth
+  ){
+    return;
+  }
+
+  if(state.currentBossHP==null){
+
+    state.currentBossHP=
+      boss.hp;
+
+  }
+
+  const damage=Math.max(
+    1,
+    Math.floor(
+      amount*
+      getBossDamageMultiplier()
+    )
+  );
+
+  state.currentBossHP-=damage;
+
+  if(state.currentBossHP<=0){
+
+    defeatCurrentBoss();
+
+  }
+
+}
+
+
+function defeatCurrentBoss(){
+
+  const boss=getCurrentBoss();
+
+  if(!boss)return;
+
+  state.currentBossHP=0;
+
+  state.defeatedBosses.push(
+    boss.id
+  );
+
+  state.needsRebirth=true;
+
+  state.currentBossHP=null;
+
+  earnMoney(
+    boss.reward,
+    false
+  );
+
+  const pet=getPet(boss.pet);
+
+  save();
+
+  render();
+
+  showToast(
+    `👑 ${boss.name} er beseiret! ${pet.icon} ${pet.name} er nå permanent ditt!`
+  );
+
+}
+
+
+/* =========================================================
+   VEKST
+========================================================= */
+
+function isNight(){
+
+  return state.dayTime>.72
+    ||state.dayTime<.18;
+
+}
+
+
+function getGrowthRate(){
+
+  let rate=
+    WEATHER[state.weather]?.growth||1;
+
+  rate*=
+    1+0.10*state.upgrades.fasterGrowth;
+
+  rate/=
+    Math.max(
+      .5,
+      1-0.05*state.upgrades.shorterGrowth
+    );
+
+  for(const id of state.activePets){
+
+    const pet=getPet(id);
+
+    if(!pet)continue;
+
+    rate+=pet.growth||0;
+
+    if(isNight()){
+      rate+=pet.night||0;
+    }
+
+    if(pet.all){
+      rate+=pet.all;
+    }
+
+  }
+
+  for(const bossId of state.defeatedBosses){
+
+    const boss=
+      BOSSES.find(
+        b=>b.id===bossId
+      );
+
+    const pet=
+      boss
+      ?getPet(boss.pet)
+      :null;
+
+    if(!pet)continue;
+
+    rate+=pet.growth||0;
+
+    if(isNight()){
+      rate+=pet.night||0;
+    }
+
+    if(pet.all){
+      rate+=pet.all;
+    }
+
+  }
+
+  if(isNight()){
+    rate*=.9;
+  }
+
+  if(state.activeEvent){
+
+    const event=
+      EVENTS[state.activeEvent.id];
+
+    if(event){
+
+      rate*=
+        event.growth||1;
+
+      if(isNight()){
+
+        rate*=
+          event.nightGrowth||1;
+
+      }
+
+    }
+
+  }
+
+  return rate;
+
+}
+
+
+/* =========================================================
+   OFFLINE
+========================================================= */
+
+function applyOfflineProgress(){
+
+  const now=Date.now();
+
+  let elapsed=
+    (now-(state.lastTick||now))
+    /1000;
+
+  if(
+    !Number.isFinite(elapsed)
+    ||elapsed<0
+  ){
+    elapsed=0;
+  }
+
+  elapsed=
+    Math.min(
+      elapsed,
+      8*60*60
+    );
+
+  if(elapsed>0){
+
+    for(const plot of state.plants){
+
+      if(!plot)continue;
+
+      const seed=
+        getSeed(plot.plantId);
+
+      if(!seed)continue;
+
+      plot.progress+=
+        elapsed*
+        getGrowthRate();
+
+      if(plot.progress>seed.time){
+
+        plot.progress=
+          seed.time;
+
+      }
+
+    }
+
+  }
+
+  state.lastTick=now;
+
+}
+
+
+/* =========================================================
+   VÆR
+========================================================= */
+
+function weatherDuration(){
+
+  let duration=
+    randomInt(35,95);
+
+  if(state.weather==="Rain"){
+
+    let frogBonus=0;
+
+    for(const id of state.activePets){
+
+      const pet=getPet(id);
+
+      if(pet?.rain){
+
+        frogBonus+=pet.rain;
+
+      }
+
+    }
+
+    duration=
+      Math.floor(
+        duration*
+        (1+frogBonus)
+      );
+
+  }
+
+  return duration;
+
+}
+
+
+function weatherWeights(){
+
+  const level=
+    state.upgrades.betterWeather;
+
+  return [
+
+    {
+      item:"Clear",
+      weight:1
+    },
+
+    {
+      item:"Rain",
+      weight:1+.18*level
+    },
+
+    {
+      item:"Storm",
+      weight:1+.10*level
+    },
+
+    {
+      item:"Frost",
+      weight:Math.max(
+        .25,
+        1-.15*level
+      )
+    },
+
+    {
+      item:"Fog",
+      weight:1
+    },
+
+    {
+      item:"Rainbow",
+      weight:1+.08*level
+    }
+
+  ];
+
+}
+
+
+function chooseWeather(){
+
+  return weightedChoice(
+    weatherWeights()
+  );
+
+}
+
+
+function setWeather(weather){
+
+  state.weather=weather;
+
+  state.weatherEnds=
+    Date.now()+
+    weatherDuration()*1000;
+
+  clearWeatherVisuals();
+
+  setupWeatherVisuals();
+
+  save();
+
+  render();
+
+}
+
+
+/* =========================================================
+   VÆR-VISUALS
+========================================================= */
+
+function clearWeatherVisuals(){
+
+  const layer=
+    document.getElementById(
+      "weatherLayer"
+    );
+
+  layer.innerHTML="";
+
+}
+
+
+function setupWeatherVisuals(){
+
+  clearWeatherVisuals();
+
+  const layer=
+    document.getElementById(
+      "weatherLayer"
+    );
+
+  /* REGN OG STORM */
+
+  if(
+    state.weather==="Rain"
+    ||state.weather==="Storm"
+  ){
+
+    for(let i=0;i<55;i++){
+
+      const drop=
+        document.createElement("div");
+
+      drop.className=
+        "rain-drop";
+
+      drop.style.left=
+        Math.random()*100+"%";
+
+      drop.style.animationDuration=
+        (.45+Math.random()*.6)+"s";
+
+      drop.style.animationDelay=
+        (-Math.random()*2)+"s";
+
+      layer.appendChild(drop);
+
+    }
+
+    if(state.weather==="Storm"){
+
+      const flash=
+        document.createElement("div");
+
+      flash.className=
+        "lightning";
+
+      layer.appendChild(flash);
+
+    }
+
+  }
+
+  /* FROST */
+
+  if(state.weather==="Frost"){
+
+    for(let i=0;i<45;i++){
+
+      const snow=
+        document.createElement("div");
+
+      snow.className="snow";
+
+      snow.style.left=
+        Math.random()*100+"%";
+
+      snow.style.animationDuration=
+        (4+Math.random()*7)+"s";
+
+      snow.style.animationDelay=
+        (-Math.random()*8)+"s";
+
+      layer.appendChild(snow);
+
+    }
+
+  }
+
+  /* TÅKE */
+
+  if(state.weather==="Fog"){
+
+    for(let i=0;i<4;i++){
+
+      const fog=
+        document.createElement("div");
+
+      fog.className="fog";
+
+      fog.style.top=
+        (10+i*22)+"%";
+
+      fog.style.left=
+        (-30+i*20)+"%";
+
+      fog.style.animationDelay=
+        (-i*4)+"s";
+
+      layer.appendChild(fog);
+
+    }
+
+  }
+
+  /* KLARVÆR */
+
+  if(state.weather==="Clear"){
+
+    for(let i=0;i<20;i++){
+
+      const particle=
+        document.createElement("div");
+
+      particle.className=
+        "sun-particle";
+
+      particle.style.left=
+        Math.random()*100+"%";
+
+      particle.style.top=
+        Math.random()*100+"%";
+
+      particle.style.animationDelay=
+        Math.random()*5+"s";
+
+      layer.appendChild(particle);
+
+    }
+
+  }
+
+  /* REGNBUE V5.5 */
+
+  if(state.weather==="Rainbow"){
+
+    const rainbow=
+      document.createElement("div");
+
+    rainbow.className=
+      "rainbow-overlay";
+
+    layer.appendChild(rainbow);
+
+  }
+
+}
+
+
+/* =========================================================
+   EVENT
+========================================================= */
+
+function eventDuration(event){
+
+  return randomInt(
+    event.min,
+    event.max
+  );
+
+}
+
+
+function checkEventMinute(){
+
+  const minute=
+    Math.floor(
+      Date.now()/60000
+    );
+
+  if(
+    minute===state.lastEventMinute
+  ){
+    return;
+  }
+
+  state.lastEventMinute=minute;
+
+  if(state.activeEvent){
+    save();
+    return;
+  }
+
+  const choices=[
+
+    EVENTS.sakura,
+    EVENTS.golden,
+    EVENTS.firefly,
+    EVENTS.koi
+
+  ];
+
+  for(const event of choices){
+
+    if(
+      Math.random()<
+      event.chance
+    ){
+
+      state.activeEvent={
+
+        id:event.id,
+
+        started:Date.now()
+
+      };
+
+      state.eventEnds=
+        Date.now()+
+        eventDuration(event)*1000;
+
+      showToast(
+        `${event.icon} ${event.name} har startet!`
+      );
+
+      renderEventVisual();
+
+      save();
+
+      return;
+
+    }
+
+  }
+
+  save();
+
+}
+
+
+function updateEvent(){
+
+  if(!state.activeEvent){
+    return;
+  }
+
+  if(
+    Date.now()>=state.eventEnds
+  ){
+
+    const old=
+      EVENTS[state.activeEvent.id];
+
+    state.activeEvent=null;
+
+    state.eventEnds=0;
+
+    document
+      .getElementById("eventVisual")
+      .innerHTML="";
+
+    showToast(
+      `${old?.icon||"🎉"} ${old?.name||"Event"} er ferdig.`
+    );
+
+    save();
+
+  }
+
+}
+
+
+/* =========================================================
+   EVENT-VISUAL
+========================================================= */
+
+function renderEventVisual(){
+
+  const root=
+    document.getElementById(
+      "eventVisual"
+    );
+
+  root.innerHTML="";
+
+  if(!state.activeEvent){
+    return;
+  }
+
+  const event=
+    EVENTS[state.activeEvent.id];
+
+  if(event.id==="sakura"){
+
+    const tree=
+      document.createElement("div");
+
+    tree.className=
+      "sakura-tree";
+
+    tree.innerHTML=`
+
+      <div class="trunk"></div>
+
+      <div class="branch b1"></div>
+
+      <div class="branch b2"></div>
+
+      <div class="branch b3"></div>
+
+      <div class="blossom b01"></div>
+      <div class="blossom b02"></div>
+      <div class="blossom b03"></div>
+      <div class="blossom b04"></div>
+      <div class="blossom b05"></div>
+      <div class="blossom b06"></div>
+      <div class="blossom b07"></div>
+      <div class="blossom b08"></div>
+      <div class="blossom b09"></div>
+
+    `;
+
+    root.appendChild(tree);
+
+    for(let i=0;i<28;i++){
+
+      const petal=
+        document.createElement("div");
+
+      petal.className=
+        "petal";
+
+      petal.style.left=
+        Math.random()*100+"%";
+
+      petal.style.top=
+        Math.random()*20+"%";
+
+      petal.style.animationDelay=
+        (-Math.random()*5)+"s";
+
+      petal.style.animationDuration=
+        (3+Math.random()*5)+"s";
+
+      root.appendChild(petal);
+
+    }
+
+  }
+
+  if(event.id==="firefly"){
+
+    for(let i=0;i<35;i++){
+
+      const firefly=
+        document.createElement("div");
+
+      firefly.className=
+        "sun-particle";
+
+      firefly.style.left=
+        Math.random()*100+"%";
+
+      firefly.style.top=
+        Math.random()*100+"%";
+
+      firefly.style.background=
+        "#e9ff70cc";
+
+      firefly.style.boxShadow=
+        "0 0 15px #faff70";
+
+      root.appendChild(firefly);
+
+    }
+
+  }
+
+}
+
+
+/* =========================================================
+   DAG / NATT
+========================================================= */
+
+function updateDay(delta){
+
+  const cycle=180;
+
+  state.dayTime=
+    (
+      state.dayTime+
+      delta/cycle
+    )%1;
+
+}
+
+
+/* =========================================================
+   GAME TICK
+========================================================= */
+
+function gameTick(){
+
+  if(!gameRunning){
+    return;
+  }
+
+  const now=Date.now();
+
+  let delta=
+    (now-state.lastTick)/1000;
+
+  if(
+    !Number.isFinite(delta)
+    ||delta<0
+  ){
+
+    delta=1;
+
+  }
+
+  delta=
+    Math.min(delta,5);
+
+  state.lastTick=now;
+
+  updateDay(delta);
+
+  for(const plot of state.plants){
+
+    if(!plot)continue;
+
+    const seed=
+      getSeed(plot.plantId);
+
+    if(seed){
+
+      plot.progress+=
+        delta*
+        getGrowthRate();
+
+      if(plot.progress>seed.time){
+
+        plot.progress=
+          seed.time;
+
+      }
+
+    }
+
+  }
+
+  if(
+    now>=state.weatherEnds
+  ){
+
+    setWeather(
+      chooseWeather()
+    );
+
+  }
+
+  updateEvent();
+
+  checkEventMinute();
+
+  if(state.activeEvent){
+
+    renderEventVisual();
+
+  }
+
+  if(
+    now-lastRender>500
+  ){
+
+    render();
+
+    lastRender=now;
+
+  }
+
+  if(
+    now%5000<1000
+  ){
+
+    save();
+
+  }
+
+}
+
+
+/* =========================================================
+   ZEN SHOP
+========================================================= */
+
+function openShop(){
+
+  document
+    .getElementById("modalTitle")
+    .textContent=
+      "🛒 Zen Shop";
+
+  document
+    .getElementById("modalContent")
+    .innerHTML=`
+
+      <div class="shop-money">
+        💰 Du har:
+        <span>${fmt(state.money)}</span>
+        penger
+      </div>
+
+      <p style="color:#d6c6a8">
+        🌱 Kjøp frø her.
+        Tomter kjøpes direkte i hagen
+        ved å klikke på låste tomter.
+      </p>
+
+      <div class="shop-grid">
+
+        ${SEEDS.map(seed=>`
+
+          <div class="card">
+
+            <div class="seed-icon">
+              ${seed.icon}
+            </div>
+
+            <h3>
+              ${seed.name}
+            </h3>
+
+            <div
+              class="rarity ${rarityClass(seed.rarity)}"
+            >
+              Rarities: ${seed.rarity}
+            </div>
+
+            <p>
+              Vekst:
+              ${seed.time}s
+            </p>
+
+            <p>
+              Verdi:
+              ${fmt(seed.value)} penger
+            </p>
+
+            <p>
+              Pris:
+              <b>
+                ${fmt(seed.price)} penger
+              </b>
+            </p>
+
+            <p>
+              Du har:
+              ${state.inventory[seed.id]||0}
+            </p>
+
+            <button
+              onclick="buySeed('${seed.id}')"
+            >
+              🌱 Kjøp frø
+            </button>
+
+          </div>
+
+        `).join("")}
+
+      </div>
+
+  `;
+
+  document
+    .getElementById("modal")
+    .classList.remove("hidden");
+
+}
+
+
+function buySeed(id){
+
+  const seed=getSeed(id);
+
+  if(!seed)return;
+
+  if(state.money<seed.price){
+
+    showToast(
+      "💰 Du har ikke nok penger."
+    );
+
+    return;
+
+  }
+
+  state.money-=seed.price;
+
+  state.inventory[id]=
+    (state.inventory[id]||0)+1;
+
+  save();
+
+  render();
+
+  openShop();
+
+  showToast(
+    `${seed.icon} ${seed.name}-frø kjøpt!`
+  );
+
+}
+
+
+/* =========================================================
+   KJÆLEDYR
+========================================================= */
+
+function petEquipped(id){
+
+  return state.activePets.includes(id);
+
+}
+
+
+function togglePet(id){
+
+  if(!state.ownedPets.includes(id)){
+    return;
+  }
+
+  const slots=
+    state.upgrades.petSlots;
+
+  if(slots<=0){
+
+    showToast(
+      "🐾 Kjøp først Kjæledyr-slots i Zen Upgrades!"
+    );
+
+    return;
+  }
+
+  if(petEquipped(id)){
+
+    state.activePets=
+      state.activePets.filter(
+        x=>x!==id
+      );
+
+  }else{
+
+    if(
+      state.activePets.length>=slots
+    ){
+
+      showToast(
+        `🐾 Du har bare ${slots} kjæledyr-slot(s).`
+      );
+
+      return;
+
+    }
+
+    state.activePets.push(id);
+
+  }
+
+  save();
+
+  openPets();
+
+  render();
+
+}
+
+
+function buyPet(id){
+
+  const pet=
+    PETS.find(
+      x=>x.id===id
+    );
+
+  if(!pet)return;
+
+  if(
+    state.ownedPets.includes(id)
+  ){
+
+    togglePet(id);
+
+    return;
+
+  }
+
+  if(state.money<pet.price){
+
+    showToast(
+      "💰 Du har ikke nok penger."
+    );
+
+    return;
+
+  }
+
+  state.money-=pet.price;
+
+  state.ownedPets.push(id);
+
+  save();
+
+  render();
+
+  openPets();
+
+  showToast(
+    `${pet.icon} ${pet.name} er kjøpt!`
+  );
+
+}
+
+
+function openPets(){
+
+  const slots=
+    state.upgrades.petSlots;
+
+  document
+    .getElementById("modalTitle")
+    .textContent=
+      "🐾 Zen-kjæledyr";
+
+  document
+    .getElementById("modalContent")
+    .innerHTML=`
+
+      <div class="card" style="margin-bottom:20px">
+
+        🐾 Utstyrte kjæledyr:
+        <b>
+          ${state.activePets.length}/${slots}
+        </b>
+
+        <br>
+
+        <small>
+          Spirit pets fra Boss er permanente
+          og bruker ikke slots.
+        </small>
+
+      </div>
+
+      <h2>
+        🐾 Vanlige kjæledyr
+      </h2>
+
+      <div class="pet-grid">
+
+        ${PETS.map(pet=>`
+
+          <div class="card">
+
+            <div class="seed-icon">
+              ${pet.icon}
+            </div>
+
+            <h3>
+              ${pet.name}
+            </h3>
+
+            <div
+              class="rarity ${rarityClass(pet.rarity)}"
+            >
+              Rarities: ${pet.rarity}
+            </div>
+
+            <p>
+              ${pet.bonus}
+            </p>
+
+            <p>
+              Pris:
+              ${fmt(pet.price)}
+              penger
+            </p>
+
+            ${
+              state.ownedPets.includes(pet.id)
+              ?
+              `
+                <button
+                  onclick="togglePet('${pet.id}')"
+                >
+                  ${
+                    petEquipped(pet.id)
+                    ?"❌ Ta av"
+                    :"✅ Utstyr"
+                  }
+                </button>
+              `
+              :
+              `
+                <button
+                  onclick="buyPet('${pet.id}')"
+                >
+                  🛒 Kjøp
+                </button>
+              `
+            }
+
+          </div>
+
+        `).join("")}
+
+      </div>
+
+      <h2 style="margin-top:30px">
+        👑 Spirit pets fra Boss
+      </h2>
+
+      <div class="pet-grid">
+
+        ${BOSS_PETS.map(pet=>{
+
+          const boss=
+            BOSSES.find(
+              b=>b.pet===pet.id
+            );
+
+          const owned=
+            boss
+            &&state.defeatedBosses.includes(
+              boss.id
+            );
+
+          return `
+
+            <div class="card">
+
+              <div class="seed-icon">
+                ${pet.icon}
+              </div>
+
+              <h3>
+                ${pet.name}
+              </h3>
+
+              <div
+                class="rarity ${rarityClass(pet.rarity)}"
+              >
+                Rarities: ${pet.rarity}
+              </div>
+
+              <p>
+                ${pet.bonus}
+              </p>
+
+              <p>
+                Boss:
+                <b>${boss?.name||"?"}</b>
+              </p>
+
+              <button disabled>
+                ${
+                  owned
+                  ?"👑 Permanent"
+                  :"🔒 Beseir Bossen"
+                }
+              </button>
+
+            </div>
+
+          `;
+
+        }).join("")}
+
+      </div>
+
+  `;
+
+  document
+    .getElementById("modal")
+    .classList.remove("hidden");
+
+}
+
+
+/* =========================================================
+   UPGRADES
+========================================================= */
+
+function upgradeCost(id){
+
+  const upgrade=
+    UPGRADE_INFO[id];
+
+  const level=
+    state.upgrades[id];
+
+  if(level>=5){
+    return Infinity;
+  }
+
+  return upgrade.cost[level];
+
+}
+
+
+function buyUpgrade(id){
+
+  const level=
+    state.upgrades[id];
+
+  if(level>=5){
+
+    showToast(
+      "⚡ Denne upgraden er maks."
+    );
+
+    return;
+
+  }
+
+  const cost=
+    upgradeCost(id);
+
+  if(state.money<cost){
+
+    showToast(
+      "💰 Du har ikke nok penger."
+    );
+
+    return;
+
+  }
+
+  state.money-=cost;
+
+  state.upgrades[id]++;
+
+  save();
+
+  render();
+
+  openUpgrades();
+
+  showToast(
+    `⚡ ${UPGRADE_INFO[id].name} er nå nivå ${state.upgrades[id]}!`
+  );
+
+}
+
+
+function openUpgrades(){
+
+  document
+    .getElementById("modalTitle")
+    .textContent=
+      "⚡ Zen Upgrades";
+
+  document
+    .getElementById("modalContent")
+    .innerHTML=`
+
+      <div class="upgrade-grid">
+
+        ${Object.entries(UPGRADE_INFO)
+          .map(([id,upgrade])=>{
+
+            const level=
+              state.upgrades[id];
+
+            const max=
+              level>=5;
+
+            const cost=
+              max
+              ?0
+              :upgradeCost(id);
+
+            let extra="";
+
+            if(id==="moneyMultiplier"){
+
+              extra=`
+                <p>
+                  Penger:
+                  ×${(1+.10*level).toFixed(2)}
+                </p>
+              `;
+
+            }
+
+            if(id==="petSlots"){
+
+              extra=`
+                <p>
+                  Slots:
+                  ${level}
+                </p>
+              `;
+
+            }
+
+            return `
+
+              <div class="card">
+
+                <div class="seed-icon">
+                  ${upgrade.icon}
+                </div>
+
+                <h3>
+                  ${upgrade.name}
+                </h3>
+
+                <p>
+                  ${upgrade.desc}
+                </p>
+
+                ${extra}
+
+                <p>
+                  Nivå:
+                  <b>${level}/5</b>
+                </p>
+
+                <div style="
+                  height:10px;
+                  background:#18241e;
+                  border-radius:10px;
+                  overflow:hidden;
+                  margin:10px 0
+                ">
+
+                  <div style="
+                    width:${level*20}%;
+                    height:100%;
+                    background:#c4a263
+                  "></div>
+
+                </div>
+
+                <button
+                  onclick="buyUpgrade('${id}')"
+                  ${max?"disabled":""}
+                >
+
+                  ${
+                    max
+                    ?"✅ MAKS"
+                    :"⚡ Oppgrader • "+
+                     fmt(cost)+
+                     " penger"
+                  }
+
+                </button>
+
+              </div>
+
+            `;
+
+          }).join("")}
+
+      </div>
+
+  `;
+
+  document
+    .getElementById("modal")
+    .classList.remove("hidden");
+
+}
+
+
+/* =========================================================
+   BOSS-MENY
+========================================================= */
+
+function openBoss(){
+
+  document
+    .getElementById("modalTitle")
+    .textContent=
+      "👑 Boss";
+
+  const current=
+    getCurrentBoss();
+
+  document
+    .getElementById("modalContent")
+    .innerHTML=`
+
+      <div
+        class="card"
+        style="margin-bottom:20px"
+      >
+
+        ${
+          state.needsRebirth
+
+          ?
+
+          `
+            <h3>
+              🔄 Boss beseiret!
+            </h3>
+
+            <p>
+              Du må ta Rebirth før neste Boss
+              blir aktiv.
+            </p>
+
+            <button
+              onclick="closeModal();openRebirth()"
+            >
+              🔄 Gå til Rebirth
+            </button>
+          `
+
+          :
+
+          `
+            <h3>
+              ${current?.icon||"👑"}
+              ${current?.name||"Alle Boss er beseiret!"}
+            </h3>
+
+            <p>
+              💰 Hver 1 penger du tjener gir
+              automatisk Boss-skade.
+            </p>
+
+            <p>
+              🚫 Det finnes ingen manuell
+              angrepsknapp.
+            </p>
+          `
+        }
+
+      </div>
+
+      <div class="boss-grid">
+
+        ${BOSSES.map((boss,index)=>{
+
+          const defeated=
+            state.defeatedBosses.includes(
+              boss.id
+            );
+
+          const pet=
+            getPet(boss.pet);
+
+          return `
+
+            <div class="card">
+
+              <div class="seed-icon">
+                ${boss.icon}
+              </div>
+
+              <h3>
+                ${index+1}.
+                ${boss.name}
+              </h3>
+
+              <p>
+                HP:
+                <b>${fmt(boss.hp)}</b>
+              </p>
+
+              <p>
+                Belønning:
+                <b>
+                  ${fmt(boss.reward)}
+                  penger
+                </b>
+              </p>
+
+              <p>
+                Kjæledyr:
+                ${pet.icon}
+                ${pet.name}
+              </p>
+
+              <div
+                class="rarity ${rarityClass(pet.rarity)}"
+              >
+                Rarities:
+                ${pet.rarity}
+              </div>
+
+              <button disabled>
+                ${
+                  defeated
+                  ?"👑 Beseiret"
+                  :"🔒 Venter"
+                }
+              </button>
+
+            </div>
+
+          `;
+
+        }).join("")}
+
+      </div>
+
+  `;
+
+  document
+    .getElementById("modal")
+    .classList.remove("hidden");
+
+}
+
+
+/* =========================================================
+   REBIRTH
+========================================================= */
+
+function openRebirth(){
+
+  document
+    .getElementById("modalTitle")
+    .textContent=
+      "🔄 Rebirth";
+
+  const next=
+    state.rebirths+1;
+
+  document
+    .getElementById("modalContent")
+    .innerHTML=`
+
+      <div class="rebirth-box">
+
+        <div style="font-size:70px">
+          🌿
+        </div>
+
+        <h2>
+          Rebirth #${next}
+        </h2>
+
+        <p>
+          Rebirth nullstiller penger,
+          planter, tomter, inventory og
+          vanlige kjæledyr.
+        </p>
+
+        <p>
+          Du beholder:
+        </p>
+
+        <p>
+          👤 Kallenavn<br>
+          🔄 Rebirth-tall<br>
+          👑 Beseirede Boss<br>
+          👻 Spirit pets<br>
+          ⚡ Alle upgrades
+        </p>
+
+        <p>
+          🥕 Etter Rebirth starter du alltid
+          med 1 gulrot.
+        </p>
+
+        ${
+          state.needsRebirth
+
+          ?
+
+          `
+            <p style="color:#ffd65a">
+              👑 Bossen er beseiret —
+              du kan ta Rebirth nå!
+            </p>
+          `
+
+          :
+
+          `
+            <p style="color:#cdbfa5">
+              Du kan ta Rebirth når du vil.
+            </p>
+          `
+        }
+
+        <button
+          class="rebirth-btn"
+          onclick="doRebirth()"
+        >
+          🔄 Rebirth
+        </button>
+
+      </div>
+
+  `;
+
+  document
+    .getElementById("modal")
+    .classList.remove("hidden");
+
+}
+
+
+function doRebirth(){
+
+  if(!confirm(
+    "Ta Rebirth? Dette nullstiller hagen din."
+  )){
+    return;
+  }
+
+  const name=state.username;
+
+  const rebirths=
+    state.rebirths+1;
+
+  const defeated=[
+    ...state.defeatedBosses
+  ];
+
+  const upgrades={
+    ...state.upgrades
+  };
+
+  state=createFreshState();
+
+  state.username=name;
+
+  state.rebirths=rebirths;
+
+  state.defeatedBosses=
+    defeated;
+
+  state.upgrades=
+    upgrades;
+
+  /*
+     V5.5:
+     Etter Rebirth starter spilleren alltid
+     med 1 gulrot i inventory.
+  */
+
+  state.inventory={
+    carrot:1
+  };
+
+  state.ownedPets=[];
+
+  state.activePets=[];
+
+  save();
+
+  closeModal();
+
+  render();
+
+  setupWeatherVisuals();
+
+  showToast(
+    `🌿 Rebirth #${rebirths} er fullført! 🥕 Du fikk 1 gulrot.`
+  );
+
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+function closeModal(){
+
+  document
+    .getElementById("modal")
+    .classList.add("hidden");
+
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+function showToast(text){
+
+  const toast=
+    document.getElementById("toast");
+
+  toast.textContent=text;
+
+  toast.classList.add("show");
+
+  clearTimeout(
+    showToast.timer
+  );
+
+  showToast.timer=
+    setTimeout(()=>{
+
+      toast.classList.remove("show");
+
+    },2800);
+
+}
+
+
+/* =========================================================
+   RENDER
+========================================================= */
+
+function render(){
+
+  document
+    .getElementById("brandName")
+    .textContent=
+      state.username||"OLO";
+
+  document
+    .getElementById("moneyDisplay")
+    .textContent=
+      fmt(state.money);
+
+  document
+    .getElementById("plotDisplay")
+    .textContent=
+      `${state.plots}/${MAX_PLOTS}`;
+
+  document
+    .getElementById("rebirthDisplay")
+    .textContent=
+      state.rebirths;
+
+  renderTime();
+
+  renderWeather();
+
+  renderBoss();
+
+  renderEvent();
+
+  renderPlots();
+
+}
+
+
+/* =========================================================
+   DAG / NATT RENDER
+========================================================= */
+
+function renderTime(){
+
+  const night=
+    isNight();
+
+  document
+    .getElementById("timeIcon")
+    .textContent=
+      night
+      ?"🌙"
+      :"☀️";
+
+  document
+    .getElementById("timeText")
+    .textContent=
+      night
+      ?"Natt"
+      :"Dag";
+
+  document.body
+    .classList.toggle(
+      "night",
+      night
+    );
+
+}
+
+
+/* =========================================================
+   VÆR RENDER
+========================================================= */
+
+function renderWeather(){
+
+  const weather=
+    WEATHER[state.weather];
+
+  document
+    .getElementById("weatherIcon")
+    .textContent=
+      weather.icon;
+
+  document
+    .getElementById("weatherName")
+    .textContent=
+      weather.name;
+
+  const left=Math.max(
+    0,
+    Math.ceil(
+      (state.weatherEnds-Date.now())
+      /1000
+    )
+  );
+
+  document
+    .getElementById("weatherTimer")
+    .textContent=
+      left;
+
+}
+
+
+/* =========================================================
+   BOSS RENDER
+========================================================= */
+
+function renderBoss(){
+
+  const boss=
+    getCurrentBoss();
+
+  const fill=
+    document.getElementById(
+      "bossFill"
+    );
+
+  if(!boss){
+
+    if(state.needsRebirth){
+
+      document
+        .getElementById("bossIcon")
+        .textContent="👑";
+
+      document
+        .getElementById("bossName")
+        .textContent=
+          "Boss beseiret";
+
+      document
+        .getElementById("bossHP")
+        .textContent=
+          "REBIRTH";
+
+      fill.style.width="100%";
+
+    }else{
+
+      document
+        .getElementById("bossIcon")
+        .textContent="🌟";
+
+      document
+        .getElementById("bossName")
+        .textContent=
+          "Alle Boss beseiret";
+
+      document
+        .getElementById("bossHP")
+        .textContent=
+          "MAKS";
+
+      fill.style.width="100%";
+
+    }
+
+    return;
+  }
+
+  if(state.currentBossHP==null){
+
+    state.currentBossHP=
+      boss.hp;
+
+  }
+
+  const hp=
+    Math.max(
+      0,
+      state.currentBossHP
+    );
+
+  document
+    .getElementById("bossIcon")
+    .textContent=
+      boss.icon;
+
+  document
+    .getElementById("bossName")
+    .textContent=
+      boss.name;
+
+  document
+    .getElementById("bossHP")
+    .textContent=
+      fmt(hp);
+
+  fill.style.width=
+    clamp(
+      hp/boss.hp*100,
+      0,
+      100
+    )+"%";
+
+}
+
+
+/* =========================================================
+   EVENT RENDER
+========================================================= */
+
+function renderEvent(){
+
+  const text=
+    document.getElementById(
+      "eventText"
+    );
+
+  const timer=
+    document.getElementById(
+      "eventTimer"
+    );
+
+  if(!state.activeEvent){
+
+    text.textContent=
+      "🎉 Ingen Event akkurat nå.";
+
+    timer.textContent="";
+
+    document
+      .getElementById("eventVisual")
+      .innerHTML="";
+
+    return;
+
+  }
+
+  const event=
+    EVENTS[state.activeEvent.id];
+
+  text.innerHTML=`
+
+    ${event.icon}
+    <b>${event.name}</b>
+    <br>
+
+    <span style="font-size:17px">
+      ${event.text}
+    </span>
+
+  `;
+
+  const left=Math.max(
+    0,
+    Math.ceil(
+      (state.eventEnds-Date.now())
+      /1000
+    )
+  );
+
+  timer.textContent=
+    `Varer i ${left}s`;
+
+  renderEventVisual();
+
+}
+
+
+/* =========================================================
+   PLOT RENDER
+========================================================= */
+
+function renderPlots(){
+
+  const root=
+    document.getElementById(
+      "plots"
+    );
+
+  let html="";
+
+  for(let i=0;i<MAX_PLOTS;i++){
+
+    /* LÅST TOMT */
+
+    if(i>=state.plots){
+
+      const price=
+        plotPrice(i);
+
+      html+=`
+
+        <div
+          class="plot locked"
+          onclick="buyPlot(${i})"
+        >
+
+          <div class="lock">
+            🔒
+          </div>
+
+          <div class="plot-name">
+            Tomt ${i+1}
+          </div>
+
+          <div>
+            Klikk for å kjøpe
+          </div>
+
+          <div class="plot-price">
+            ${fmt(price)} penger
+          </div>
+
+        </div>
+
+      `;
+
+      continue;
+
+    }
+
+    const plot=
+      state.plants[i];
+
+    /* TOM TOMT */
+
+    if(!plot){
+
+      html+=`
+
+        <div
+          class="plot unlocked"
+          onclick="plantPlot(${i})"
+        >
+
+          <div class="plant-icon">
+            🌱
+          </div>
+
+          <div class="plot-name">
+            Tomt ${i+1}
+          </div>
+
+          <div>
+            Velg et frø først
+          </div>
+
+        </div>
+
+      `;
+
+      continue;
+
+    }
+
+    const seed=
+      getSeed(plot.plantId);
+
+    if(!seed){
+
+      html+=`
+
+        <div class="plot unlocked">
+
+          <div>
+            ⚠️
+          </div>
+
+          <div>
+            Ugyldig plante
+          </div>
+
+        </div>
+
+      `;
+
+      continue;
+
+    }
+
+    const progress=
+      clamp(
+        plot.progress/seed.time,
+        0,
+        1
+      )*100;
+
+    const ready=
+      progress>=100;
+
+    let mutationText="";
+
+    if(plot.mutation){
+
+      mutationText=
+        `${plot.mutation.icon}
+         ${plot.mutation.name}
+         ×${plot.mutation.multiplier}`;
+
+    }else if(ready){
+
+      mutationText=
+        "✨ Mutasjon trekkes ved høsting";
+
+    }
+
+    html+=`
+
+      <div
+        class="plot unlocked"
+        onclick="plantPlot(${i})"
+      >
+
+        <div class="plant-icon">
+          ${seed.icon}
+        </div>
+
+        <div class="plant-name">
+          ${seed.name}
+        </div>
+
+        <div
+          class="${rarityClass(seed.rarity)}"
+        >
+          ${seed.rarity}
+        </div>
+
+        <div class="progress">
+
+          <div
+            class="progress-fill"
+            style="width:${progress}%"
+          ></div>
+
+        </div>
+
+        ${
+          ready
+
+          ?
+
+          `
+            <div class="ready">
+              ✨ KLAR!
+              Klikk for å høste
+            </div>
+          `
+
+          :
+
+          `
+            <div>
+              ${Math.floor(progress)}%
+            </div>
+          `
+        }
+
+        ${
+          mutationText
+
+          ?
+
+          `
+            <div class="mutation">
+              ${mutationText}
+            </div>
+          `
+
+          :
+
+          ""
+        }
+
+      </div>
+
+    `;
+
+  }
+
+  root.innerHTML=html;
+
+}
+
+
+/* =========================================================
+   AUTOSAVE
+========================================================= */
+
+window.addEventListener(
+  "beforeunload",
+  save
+);
+
+
+/* =========================================================
+   START
+========================================================= */
+
+load();
+
+
+/*
+   Dersom det allerede finnes en save,
+   starter spillet direkte etter reload.
+*/
+
+if(
+  localStorage.getItem(SAVE_KEY)
+  &&state.username
+){
+
+  document
+    .getElementById("startScreen")
+    .classList.add("hidden");
+
+  document
+    .getElementById("game")
+    .classList.remove("hidden");
+
+  gameRunning=true;
+
+  render();
+
+  setupWeatherVisuals();
+
+  tickTimer=
+    setInterval(
+      gameTick,
+      1000
+    );
+
+}
 </script>
+
 </body>
 </html>
+```
